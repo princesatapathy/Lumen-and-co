@@ -1,0 +1,14 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.log
+.libs/
+
+# Kept on this machine only, never committed (docs/DECISIONS.md: D-14, D-16, D-18, D-21)
+archive/
+site/tests/
+reference-analysis/videos/
+reference-analysis/screenshots/
+screenshots/
+SSofdesktop/
+*.mp4
