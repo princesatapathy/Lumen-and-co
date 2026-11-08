@@ -13,6 +13,6 @@ const step = ({ title, body }: (typeof steps)[number], index: number) => {
   </div>`;
 };
 export const process = `<section id="process" data-reveal class="${sectionShell} gap-12 bg-paper">
-  ${head(processContent.eyebrow, processContent.heading, processContent.lead)}
+  ${head(processContent.eyebrow, processContent.heading, processContent.lead, 'max-w-[768px]')}
   <div class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-6">${steps.map(step).join('')}</div>
 </section>`;

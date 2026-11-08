@@ -27,5 +27,5 @@ export const h3 = (html: string, sizeClass = 'text-2xl leading-[30px] md:text-[2
   `<h3 class="font-display font-bold tracking-[-0.03em] ${sizeClass}">${html}</h3>`;
 
 // Eyebrow + h2 (+ optional lead paragraph) block that opens most sections.
-export const head = (eyebrowText: string, heading: AccentedHeading, lead?: string) =>
-  `<div class="flex flex-col">${eyebrow(eyebrowText)}${h2(accented(heading), 'mt-6 max-w-[768px]')}${lead ? `<p class="mt-5 max-w-[576px] ${leadText}">${lead}</p>` : ''}</div>`;
+export const head = (eyebrowText: string, heading: AccentedHeading, lead?: string, headingExtraClass = '') =>
+  `<div class="flex flex-col">${eyebrow(eyebrowText)}${h2(accented(heading), `mt-6 ${headingExtraClass}`)}${lead ? `<p class="mt-5 max-w-[576px] ${leadText}">${lead}</p>` : ''}</div>`;

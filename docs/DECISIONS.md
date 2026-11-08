@@ -156,8 +156,9 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 ### D-26 Step 4 matches the reference's layout rules, not its section heights
 - **Decided by:** me, within D-07 and D-17.
 - **Why:** a live comparison found 48 exact copy matches with the reference, against D-07, so all placeholder copy was rewritten first. Once the copy is our own, line wraps differ, so equal section heights are not a meaningful target. Spacing, type, grid columns, widths and card proportions are matched instead.
-- **Result:** where line counts agree, heights match within 2 px (at 1280: work, process, plans, band, FAQ, CTA, footer). Remaining height gaps come from copy length. `reference-analysis/scripts/section-compare.mjs` measures; `copy-overlap.mjs` guards D-07.
-- **Not matched:** the accent font (the reference uses a commercial one), the Instagram embeds (our own placeholder cards), and button size below `md` (shared with the already-matched hero).
+- **Result:** where line counts agree, heights match within 2 px (at 1280: work, process, plans, band, FAQ, CTA, footer). Other sections differ in height (largest: about at 1280 and 768, plans, process and CTA at 375). That is expected from copy length, but was not checked element by element. `reference-analysis/scripts/section-compare.mjs` measures; `copy-overlap.mjs` guards D-07.
+- **Not matched:** the accent font (the reference uses a commercial one) and the Instagram embeds (our own placeholder cards).
+- **Open, owner to decide:** below `md` our buttons are 15 px with 20 px side padding, the reference uses 16 px with 28 px. Fixing it moves the hero, which was not part of this step.
 
 ## Open: waiting for the owner
 

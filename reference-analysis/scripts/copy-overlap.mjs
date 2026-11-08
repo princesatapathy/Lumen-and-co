@@ -10,9 +10,14 @@ const readTextBlocks = async (url) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(url, { waitUntil: 'load' });
   await page.waitForTimeout(1500);
-  const blocks = await page.evaluate(() => [...document.querySelectorAll('h1,h2,h3,p,li,a,button,blockquote,summary,span,div')]
-    .filter((element) => [...element.childNodes].some((node) => node.nodeType === 3 && node.textContent.trim()))
-    .map((element) => element.textContent));
+  const blocks = await page.evaluate(() => [
+    ...[...document.querySelectorAll('body *:not(script):not(style):not(noscript)')]
+      .filter((element) => [...element.childNodes].some((node) => node.nodeType === 3 && node.textContent.trim()))
+      .map((element) => element.textContent),
+    ...[...document.querySelectorAll('[aria-label],[alt],[title],[placeholder]')].flatMap((element) => ['aria-label', 'alt', 'title', 'placeholder'].map((name) => element.getAttribute(name) ?? '')),
+    ...[...document.querySelectorAll('meta[name="description"],meta[property^="og:"],meta[name^="twitter:"]')].map((element) => element.getAttribute('content') ?? ''),
+    document.title,
+  ].filter((text) => text.trim()));
   await page.close();
   return [...new Set(blocks)];
 };

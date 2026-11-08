@@ -1,7 +1,7 @@
 // Hero, reel and marquee copy.
 
 export const heroContent = {
-  badge: 'PERSONAL BRANDING STUDIO',
+  badge: 'VIDEO-FIRST BRAND STUDIO',
   headlineLines: ['Stand out.', 'Stay'],
   headlineAccent: 'known.',
   lead: 'We shape the story, script the content and film it alongside you, so the right people recognise your name before you ever say hello.',

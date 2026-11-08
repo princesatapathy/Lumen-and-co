@@ -13,7 +13,7 @@ pnpm dev        # http://localhost:5173/
 pnpm build      # tsc --noEmit, then vite build -> site/dist/
 ```
 
-Checks (page heights against the golden baseline, motion, menu, marquee) are Playwright specs in `site/tests/e2e/`. Run `cd site; pnpm test` (about 1.5 minutes; uses the installed Chrome and the dev server on :5173). Playwright is a dev-only dependency and never reaches `dist/`. The older loose scripts stay in `site/tests/legacy-scripts/` (`pixdiff` and `capture-baseline` have no spec).
+Checks (page heights against the golden baseline, motion, menu, marquee) are Playwright specs in `site/tests/e2e/`. Run `cd site; pnpm test` (about 3 minutes; uses the installed Chrome and the dev server on :5173). Playwright is a dev-only dependency and never reaches `dist/`. The older loose scripts stay in `site/tests/legacy-scripts/` (`pixdiff` and `capture-baseline` have no spec).
 
 The helper scripts in `dev-tools/`, `reference-analysis/scripts/` and `design-source/scripts/` use `dev-tools/browser.mjs`. Run `pnpm install` once inside `dev-tools/` first. They use the Chrome installed on this machine, so no browser is downloaded.
 
