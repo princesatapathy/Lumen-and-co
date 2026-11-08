@@ -150,7 +150,7 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 
 ### D-25 Helper scripts load Playwright through `dev-tools/browser.mjs`
 - **Decided by:** me, during Step 1, within D-03 and D-15.
-- **Why:** before, every script carried its own import and install. Now `dev-tools/package.json` holds the single dependency (`playwright-core`, official Microsoft package) and scripts import `dev-tools/browser.mjs` by relative path (for example `../../dev-tools/browser.mjs`).
+- **Why:** before, every script carried its own import and install. Now `dev-tools/package.json` holds the single dependency (`playwright-core`, official Microsoft package) and scripts import `dev-tools/browser.mjs` by relative path (for example `../../dev-tools/browser.mjs`). The specs in `site/tests/e2e/` are separate: they use `@playwright/test` from `site/`.
 - **Cost:** a script moved to a different depth needs its relative import fixed. `dev-tools/node_modules` must be installed once with pnpm.
 
 ## Open: waiting for the owner

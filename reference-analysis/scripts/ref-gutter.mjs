@@ -1,6 +1,6 @@
 import { chromium } from '../../dev-tools/browser.mjs';
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
-for (const [who, url, label] of [['ref', 'https://naveenrkcreates.com/', '^our take'], ['ours', 'http://localhost:5173/', '^our take']]) {
+for (const [who, url, label] of [['ref', 'https://naveenrkcreates.com/', '^our take'], ['ours', 'http://localhost:5173/', '^our view']]) {
   for (const w of [768, 1024, 1180, 1280, 1440, 1920]) {
     const page = await (await browser.newContext({ viewport: { width: w, height: 900 } })).newPage();
     await page.emulateMedia({ reducedMotion: 'reduce' });

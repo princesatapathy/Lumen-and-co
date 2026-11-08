@@ -54,7 +54,7 @@ flowchart LR
   styles[styles/<br/>index.css = tailwind + theme + base] --> main
 ```
 
-Rule: **dependencies point one way**: content and components feed the section builders, the builders feed `main.ts`. `content/` imports nothing (data only). `behavior/` never imports sections; it finds elements through the DOM hooks listed in section 6 and takes its two labels from `content/brand.ts`.
+Rule: **dependencies point one way**: content and components feed the section builders, the builders feed `main.ts`. `content/` is data only (it imports nothing except its own types); `components/` and `sections/` read from it. `behavior/` never imports sections; it finds elements through the DOM hooks listed in section 6 and takes its two labels from `content/brand.ts`.
 
 ### Folder layout (done in Step 2a)
 
@@ -115,7 +115,7 @@ There is no animation library. Every `animate-*` has `motion-reduce:animate-none
 | `.faq`, `.faq-q`, `data-open`, `aria-expanded` | FAQ behavior, motion check |
 | `[data-reveal] > *`, `.reveal`, `.in` | reveal behavior, motion check |
 | `.rdup` | reduced-motion check (duplicate tiles hidden) |
-| `.btn-p`, `.btn-s`, `.btn-w` | hover checks |
+| `.btn-p`, `.btn-s` | hover checks |
 | `#top`, `.about-photo`, `section[aria-label="What we do"]` | motion and marquee checks |
 
 ## 7. Where the design comes from (data flow)
@@ -141,12 +141,11 @@ flowchart TD
     m[motion: animation durations, hover, focus, FAQ, reveal, reduced motion]
     mq[marquee: never runs out of text up to 2560 px; pause on hover]
     mn[menu: closed, opens, closes on link, never shows at desktop]
-    px[pixel diff against golden screenshots]
   end
   build[pnpm build<br/>tsc --noEmit + vite build] --> ok[clean build]
 ```
 
-Today these are loose scripts in `site/tests/legacy-scripts/`. Target: one command that runs all of them from `site/tests/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18).
+`cd site; pnpm test` runs these as 17 specs in `site/tests/e2e/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18). Pixel diff against the golden screenshots is not automated: `site/tests/legacy-scripts/pixdiff.mjs` has no spec and must be run by hand.
 
 ## 9. Repo layout
 
@@ -158,8 +157,8 @@ Portfolio2/
   site/                       product: Vite + TypeScript + Tailwind v4 (pnpm)
     index.html  package.json  tsconfig.json  vite.config.ts
     src/                      main.ts, styles/, content/, components/, sections/, behavior/ (section 3)
-    tests/                    ignored: legacy-scripts/, baseline/ (golden), output/, snapshot-dom.mjs
-  dev-tools/                  browser.mjs (the one Playwright import), range-server.mjs, package.json
+    tests/                    ignored: e2e/ (specs), legacy-scripts/, baseline/ (golden), output/, snapshot-dom.mjs, README.md
+  dev-tools/                  browser.mjs (Playwright for helper scripts), range-server.mjs, package.json
   reference-analysis/         measuring the live reference
     scripts/  data/  specs/   tracked
     videos/  screenshots/     ignored

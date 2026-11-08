@@ -35,7 +35,7 @@ The Figma frames and everything in `design-source/` were built from earlier refe
 ## 3. Capture pipeline (code to Figma)
 
 1. Regenerate the design HTML: `cd design-source/scripts; node gen-responsive.mjs` (it writes to `../`, so run it from that folder). It writes `design-source/responsive.html`, `responsive-menu-open.html` and `states.html`. (Planned change for Step 6: build these from the site's real output instead of a second hand-written generator.)
-2. Preview PNGs: `node design-source/scripts/render-responsive.mjs [widths]` writes `design-source/responsive-<w>.png`. It checks horizontal overflow at 375 / 768 / 1280.
+2. Preview PNGs: `cd design-source/scripts; node render-responsive.mjs [widths]` (run it from that folder, the output path is relative) writes `design-source/responsive-<w>.png`. It checks horizontal overflow at 375 / 768 / 1280.
 3. Serve `design-source/` on a local port (earlier runs used `python -m http.server 8765`; a Range-capable server is not needed here).
 4. Call the Figma tool `generate_figma_design {fileKey}`. It returns a `captureId` (and a `promptId`).
 5. Run `node design-source/scripts/figma-capture.mjs http://localhost:8765/responsive.html <captureId> <promptId> <viewportWidth>`. It drives installed Chrome with Playwright (through `dev-tools/browser.mjs`) and injects Figma's `capture.js`.
@@ -64,7 +64,7 @@ One HTML + PNG per section (`NN-name`) is in `design-source/sections/`. Breakpoi
 
 ## 6. Measured states and motion (for the states sheet)
 
-Hover, focus and animation numbers are in `REFERENCE-NOTES.md`, section 4 (Motion). The 17 motion checks that passed on the generator output were run by `verify-motion.mjs`, which now targets the site (`site/tests/legacy-scripts/`).
+Hover, focus and animation numbers are in `REFERENCE-NOTES.md`, section 4 (Motion). The 17 motion checks that passed on the generator output were run by `verify-motion.mjs`, now replaced for the site by `site/tests/e2e/motion.spec.ts`.
 
 ## 7. Related files
 

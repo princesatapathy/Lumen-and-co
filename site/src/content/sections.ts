@@ -2,7 +2,7 @@
 import type { AccentedHeading } from './types';
 
 export const statementContent = {
-  eyebrow: 'OUR TAKE',
+  eyebrow: 'OUR VIEW',
   heading: { lead: 'Reach doesn’t open doors. ', accent: 'Recall', tail: ' does.' } satisfies AccentedHeading,
   paragraphs: [
     'Most content chases impressions. We build yours around one idea: that a stranger should be able to describe you after a single scroll. Your voice, your point of view, the one thing you stand for.',
@@ -23,7 +23,7 @@ export const deliverablesContent = {
 };
 
 export const processContent = {
-  eyebrow: '03 — HOW IT WORKS',
+  eyebrow: '03 — THE PROCESS',
   heading: { lead: 'From first call to a brand people ', accent: 'recall.' } satisfies AccentedHeading,
   lead: 'A clear system, step by step. No guesswork.',
   stepLabel: 'STEP',
@@ -33,7 +33,7 @@ export const plansContent = {
   eyebrow: '04 — PLANS',
   heading: { lead: 'Guidance, or ', accent: 'done for you.' } satisfies AccentedHeading,
   lead: 'Two ways to work together. We will work out which one fits you best on a call, with no pressure at all.',
-  featuredBadge: 'MOST PICKED',
+  featuredBadge: 'MOST POPULAR',
 };
 
 export const bandContent = {

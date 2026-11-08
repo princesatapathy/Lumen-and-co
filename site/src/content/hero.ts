@@ -11,7 +11,7 @@ export const heroContent = {
 export const reelContent = {
   tip: 'Most clips get skipped.',
   caption: 'known.',
-  tileTag: 'Passed by',
+  tileTag: 'Skipped',
 };
 
 export const marqueeLabel = 'What we do';

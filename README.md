@@ -21,8 +21,8 @@ The helper scripts in `dev-tools/`, `reference-analysis/scripts/` and `design-so
 
 | Folder | What it holds |
 |---|---|
-| `site/` | The product. `src/` (target layout: `main.ts`, `styles/`, `content/`, `components/`, `sections/`, `behavior/`), `index.html`, config. `tests/` holds checks and golden screenshots |
-| `dev-tools/` | `browser.mjs` (the one place Playwright is loaded from) and `range-server.mjs` (static server with Range support, needed for video seeking) |
+| `site/` | The product. `src/` (`main.ts`, `styles/`, `content/`, `components/`, `sections/`, `behavior/`), `index.html`, config. `tests/` holds checks and golden screenshots |
+| `dev-tools/` | `browser.mjs` (where the helper scripts load Playwright from; the specs in `site/tests/e2e/` use `@playwright/test`) and `range-server.mjs` (static server with Range support, needed for video seeking) |
 | `reference-analysis/` | Measuring the live reference: `scripts/`, `data/`, `specs/` (older notes), `videos/`, `screenshots/` |
 | `design-source/` | The old design HTML, tokens and the Figma capture scripts. **Stale** compared with the site; re-synced in the last step |
 | `docs/` | Architecture, decisions, plan, notes. See below |

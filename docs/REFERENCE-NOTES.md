@@ -6,7 +6,7 @@ Reference: https://naveenrkcreates.com/ (layout and behavior only; see D-07). Nu
 How to read the marks:
 - **STALE** = the value in the old specs no longer matches the site. The site uses the live-measured values from `DECISIONS.md` D-10 / D-11.
 - Unmarked = still a valid measurement, though the site may round or make it fluid.
-- The source of truth for the site's numbers is `DECISIONS.md` and `site/src/index.css`, not this file.
+- The source of truth for the site's numbers is `DECISIONS.md` and `site/src/styles/theme.css` + `base.css`, not this file.
 
 ## 1. Current site values (win over anything below)
 
@@ -92,7 +92,7 @@ Other measured text at 1280: nav links 15/24 fw 500; hero lead 20/31; section le
 | Secondary button | pill, transparent, 1 px ink border, same size. Hover: text and border turn primary |
 | Eyebrow | small star glyph, number, uppercase label. Pill version in the hero: 12 px, padding 8 x 18, 1 px border, gap 12 |
 | Step card | white, radius 20, padding 32, 1 px line border, no shadow. "STEP 0n" label, h3, body. 348 x 283 (first row), last card 532 x 228 |
-| Plan card | two cards, radius 20, padding 40, 1 px border, 528 x 503. Cream card `#FBF9F4` with line border; featured card primary fill. Small "most picked" tab on the top edge. Check-icon list, button inside. No shadow |
+| Plan card | two cards, radius 20, padding 40, 1 px border, 528 x 503. Cream card `#FBF9F4` with line border; featured card primary fill. Small label tab on the top edge. Check-icon list, button inside. No shadow |
 | Work card | white, radius 20, 1 px line border, about 345 x 614 at 1280, no shadow |
 | Final CTA card | primary fill, radius 28, padding 96 x 48, 1084 wide |
 | Commitment band | primary fill, padding 96; pill tag with 1 px border at 40% white |
@@ -133,7 +133,7 @@ The old comparison file also listed the Paper-era design against these, e.g. her
 ## 7. Behavior
 
 ### Navigation
-- Logo (header and footer) goes to `#top`. Nav links go to `#work`, `#how`, `#packages`, `#about`, `#faq` with smooth scroll and URL hash update. The hero "see our work" button goes to `#work`.
+- Logo (header and footer) goes to `#top`. Nav links go to `#work`, `#how`, `#packages`, `#about`, `#faq` with smooth scroll and URL hash update. The hero secondary button goes to `#work`.
 - Landing offset: target section tops land 80 / 80 / 80 / 83 / 103 px below the viewport top against a 73 px header. `scroll-margin-top` is 0; the offset comes from section padding.
 - An odd frame in the desktop recording (menu item hovered while the view still showed another section) was a smooth scroll in motion, not a bug.
 
@@ -151,7 +151,7 @@ The old comparison file also listed the Paper-era design against these, e.g. her
 - Reveal animation leaves sections blank if the page is scrolled fast. The site skips the reveal entirely under reduced motion (`ARCHITECTURE.md` section 5); fast-scroll behavior is not separately checked.
 
 ## 8. Global checks the build must pass
-No horizontal overflow at 375 / 444 / 768 / 1280; tap targets at least 44 px; visible keyboard focus; content visible under reduced motion. Today these are run by `site/tests/legacy-scripts/` (see `ARCHITECTURE.md` section 8).
+No horizontal overflow at 375 / 444 / 768 / 1280; tap targets at least 44 px; visible keyboard focus; content visible under reduced motion. The specs in `site/tests/e2e/` cover the overflow, motion and reduced-motion parts (see `ARCHITECTURE.md` section 8).
 
 ## 9. Old plans that no longer apply
 The old spec proposed React + Tailwind and a "failing check first" loop per section. The stack is now vanilla TypeScript + Tailwind v4 on Vite (D-01, D-02, D-03). Its evidence paths (`tools/`, `SSofdesktop/`, root `.mp4` files) moved in Step 1; the table in section 2 has the new paths.
