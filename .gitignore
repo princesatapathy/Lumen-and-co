@@ -12,3 +12,4 @@ reference-analysis/screenshots/
 design-source/screenshots/
 test-results/
 playwright-report/
+reference-analysis/data/section-compare-*.json

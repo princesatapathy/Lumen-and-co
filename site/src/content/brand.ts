@@ -13,11 +13,11 @@ export const navLinks = [
 ] as const;
 
 export const footerColumns = [
-  { heading: 'STUDIO', links: [['Work', '#work'], ['Process', '#process'], ['Plans', '#plans'], ['About', '#about'], ['FAQ', '#faq']] },
-  { heading: 'CONNECT', links: [['hello@example.com', 'mailto:hello@example.com'], ['Book a call', '#book'], ['Instagram', '#'], ['YouTube', '#'], ['LinkedIn', '#']] },
+  { heading: 'EXPLORE', links: [['Work', '#work'], ['Process', '#process'], ['Plans', '#plans'], ['About', '#about'], ['FAQ', '#faq']] },
+  { heading: 'CONTACT', links: [['hello@example.com', 'mailto:hello@example.com'], ['Arrange a chat', '#book'], ['Instagram', '#'], ['YouTube', '#'], ['LinkedIn', '#']] },
 ] as const;
 
-export const footerTagline = 'A personal branding studio helping people get remembered.';
+export const footerTagline = 'Making quietly excellent people easier to find.';
 export const copyrightLine = `© 2026 ${brandName} All rights reserved.`;
 export const openMenuLabel = 'Open menu';
 export const closeMenuLabel = 'Close menu';

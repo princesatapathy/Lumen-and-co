@@ -9,19 +9,19 @@ export const heroContent = {
 };
 
 export const reelContent = {
-  tip: 'Most clips get skipped.',
+  tip: 'Forgotten by lunchtime.',
   caption: 'known.',
-  tileTag: 'Skipped',
+  tileTag: 'Forgotten',
 };
 
 export const marqueeLabel = 'What we do';
 
 export const reelColumns = [
-  ['3 tools I swear by', 'Day 12 of filming', 'Wait for the end…', 'Plain advice, once'],
-  ['POV: you are the expert', 'Quick tip for you', 'Same hook, new day', 'What I would redo'],
-  ['5 habits that stuck', 'Mistakes worth making', 'Behind the scenes', 'One honest take'],
-  ['Hook in three seconds', 'Stories beat stats', 'Film it once', 'Say it simply'],
+  ['Inside my notebook', 'Day 12 of filming', 'Stay for the ending', 'Plain advice, once'],
+  ['A lesson from a client', 'Two minutes on pricing', 'Monday studio notes', 'What I would redo'],
+  ['Habits that held up', 'Mistakes worth making', 'Behind the scenes', 'One honest opinion'],
+  ['Open with a question', 'Stories beat stats', 'Film it once', 'Say it simply'],
 ] as const;
 
-export const marqueeBold = ['edits', 'Based in Lisbon', 'personal branding', 'strategy', 'scripts', 'shoots'];
-export const marqueeItalic = ['built for the long run', 'people, not just clicks', 'known, not just seen', 'real stories'];
+export const marqueeBold = ['positioning', 'Filmed in Lisbon', 'short video', 'storytelling', 'direction', 'post-production'];
+export const marqueeItalic = ['made to be repeated', 'clarity over volume', 'your voice, only sharper', 'worth remembering'];

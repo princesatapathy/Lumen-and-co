@@ -1,7 +1,7 @@
 # Reorganization plan
 
 Goal: one clear structure for code, folders and docs, with **no visual change** to the site.
-Status: Step 0 and Step 1 done (2026-11-08). Step 2 done: 2a site refactor (rendered DOM and CSS byte-identical), 2b `pnpm test` (17 specs pass), 2c docs. `pixdiff` was not ported to a spec (run by hand). Step 3 review done (2026-11-08): no DOM or CSS regression from the refactor; fixed `range-server` crash and exposure, four labels that matched the reference, stale docs. Carried to Step 4: menu stays open across a resize past `lg`, no Escape to close the menu, FAQ answers' `role="region"` has no name. Steps 4 onward not started. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
+Status: Step 0 and Step 1 done (2026-11-08). Step 2 done: 2a site refactor (rendered DOM and CSS byte-identical), 2b `pnpm test` (17 specs pass), 2c docs. `pixdiff` was not ported to a spec (run by hand). Step 3 review done (2026-11-08): no DOM or CSS regression from the refactor; fixed `range-server` crash and exposure, stale docs. That review only caught four copied labels; Step 4 found 48 exact matches with the reference and rewrote all placeholder copy (`reference-analysis/scripts/copy-overlap.mjs` is the check). Carried to Step 4: menu stays open across a resize past `lg`, no Escape to close the menu, FAQ answers' `role="region"` has no name. Steps 4 onward not started. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
 
 ## 1. Problems this fixes
 
