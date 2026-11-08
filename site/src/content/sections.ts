@@ -73,19 +73,17 @@ export const clips = [
   { label: 'Watch clip 03 →', background: '#BFD3C8' },
 ];
 
-type Deliverable = { lead: string; rest: string };
-export const deliverablesLeft: Deliverable[] = [
+// Reads left to right, row by row, in the two-column grid.
+export const deliverableItems = [
   { lead: 'A sharp positioning line:', rest: 'one sentence that says who you help and how' },
-  { lead: 'Competitor scan:', rest: 'which voices fill your niche and where the gap sits' },
-  { lead: 'Draft scripts:', rest: 'an opening line, one idea, a natural close' },
-  { lead: 'Filming days in Lisbon', rest: '' },
-  { lead: 'A standing session', rest: 'every week to look back and look ahead' },
-];
-export const deliverablesRight: Deliverable[] = [
   { lead: 'Profile makeover:', rest: 'name, photo, pinned posts and link page, tidied up so newcomers stay' },
+  { lead: 'Competitor scan:', rest: 'which voices fill your niche and where the gap sits' },
   { lead: 'Topic map:', rest: 'themes for each month, tied to what you sell' },
+  { lead: 'Draft scripts:', rest: 'an opening line, one idea, a natural close' },
   { lead: 'Presence coaching:', rest: 'voice, pace and where to put your hands' },
+  { lead: 'Filming days in Lisbon', rest: '' },
   { lead: 'Finishing:', rest: 'cuts, audio cleanup, titles and thumbnails' },
+  { lead: 'A standing session', rest: 'every week to look back and look ahead' },
   { lead: 'End-of-month report', rest: 'covering wins, misses and the next experiment' },
 ];
 

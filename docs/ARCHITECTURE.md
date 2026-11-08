@@ -145,7 +145,7 @@ flowchart TD
   build[pnpm build<br/>tsc --noEmit + vite build] --> ok[clean build]
 ```
 
-`cd site; pnpm test` runs these as 17 specs in `site/tests/e2e/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18). Pixel diff against the golden screenshots is not automated: `site/tests/legacy-scripts/pixdiff.mjs` has no spec and must be run by hand.
+`cd site; pnpm test` runs these as 18 specs in `site/tests/e2e/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18). Pixel diff against the golden screenshots is not automated: `site/tests/legacy-scripts/pixdiff.mjs` has no spec and must be run by hand.
 
 ## 9. Repo layout
 

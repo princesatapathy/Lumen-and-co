@@ -2,12 +2,12 @@ import type { AccentedHeading } from '../content/types';
 import { star } from './icons';
 
 // Small all-caps label used by eyebrows, step numbers and footer column headings.
-export const labelText = 'text-xs leading-[normal] font-semibold tracking-[.14em]';
+export const labelText = 'text-xs leading-4 font-semibold tracking-[.14em]';
 // Paragraph that introduces a section or a statement.
 export const leadText = 'text-lg leading-[29.25px]';
 
 export const eyebrow = (text: string, onDark = false) =>
-  `<div class="flex items-center gap-2.5 ${labelText} ${onDark ? 'text-white/85' : 'text-muted'}">${star(onDark ? 'text-white' : 'text-primary')}<span>${text}</span></div>`;
+  `<div class="flex h-5 items-center gap-2.5 ${labelText} ${onDark ? 'text-white/85' : 'text-muted'}">${star(onDark ? 'text-white' : 'text-primary', 14)}<span>${text}</span></div>`;
 
 const accentTone = {
   primary: 'font-extrabold tracking-[-0.02em] text-primary',
@@ -28,4 +28,4 @@ export const h3 = (html: string, sizeClass = 'text-2xl leading-[30px] md:text-[2
 
 // Eyebrow + h2 (+ optional lead paragraph) block that opens most sections.
 export const head = (eyebrowText: string, heading: AccentedHeading, lead?: string) =>
-  `<div class="flex flex-col gap-6">${eyebrow(eyebrowText)}${h2(accented(heading))}${lead ? `<p class="${leadText}">${lead}</p>` : ''}</div>`;
+  `<div class="flex flex-col">${eyebrow(eyebrowText)}${h2(accented(heading), 'mt-6 max-w-[768px]')}${lead ? `<p class="mt-5 max-w-[576px] ${leadText}">${lead}</p>` : ''}</div>`;

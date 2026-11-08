@@ -14,4 +14,13 @@ export function initMenu() {
   requireElement('#mobile-menu').addEventListener('click', (event) => {
     if ((event.target as HTMLElement).closest('a')) setOpen(false);
   });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || header.dataset.menuOpen !== 'true') return;
+    setOpen(false);
+    toggle.focus();
+  });
+  // The menu only exists below lg, so it must not come back open after a resize.
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (event) => {
+    if (event.matches) setOpen(false);
+  });
 }

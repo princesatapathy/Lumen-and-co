@@ -5,15 +5,17 @@ import { person } from '../components/icons';
 import { accented, eyebrow } from '../components/typography';
 import { sectionShell } from '../components/layout';
 
-export const about = `<section id="about" data-reveal class="${sectionShell} gap-10 bg-paper md:flex-row md:items-start md:justify-between">
-  <div class="about-copy flex flex-col items-start gap-6 md:flex-1 lg:w-[560px] lg:flex-none">
+export const about = `<section id="about" data-reveal class="${sectionShell} gap-12 bg-paper md:grid md:grid-cols-[1.3fr_1fr] md:gap-10 lg:gap-20">
+  <div class="about-copy flex flex-col items-start">
     ${eyebrow(aboutContent.eyebrow)}
-    <blockquote class="font-accent text-[34px] leading-[38px] tracking-[-0.01em] italic md:text-[38px] md:leading-[42px] lg:text-[52px] lg:leading-[57.2px]">${accented(aboutContent.quote, 'quote')}</blockquote>
-    ${aboutContent.paragraphs.map((text) => `<p class="leading-[27.6px]">${text}</p>`).join('\n    ')}
-    <div class="flex flex-wrap gap-3">${button(bookIntroCallLabel, 'primary')}${button(aboutContent.secondaryCallToAction, 'secondary', { href: '#' })}</div>
+    <blockquote class="mt-6 font-accent text-[clamp(33.6px,4.6vw,52px)] leading-[1.1] tracking-[-0.01em] italic">${accented(aboutContent.quote, 'quote')}</blockquote>
+    <div class="mt-8 flex flex-col gap-4">
+      ${aboutContent.paragraphs.map((text) => `<p class="leading-[27.625px]">${text}</p>`).join('\n      ')}
+    </div>
+    <div class="mt-8 flex flex-wrap gap-3">${button(bookIntroCallLabel, 'primary')}${button(aboutContent.secondaryCallToAction, 'secondary', { href: '#' })}</div>
   </div>
-  <div class="about-photo flex flex-col gap-3 md:w-[260px] md:shrink-0 lg:w-[437px]">
-    <div class="flex aspect-[437/546] items-end overflow-hidden rounded-[20px] bg-[#C9CFE8]">${person}</div>
-    <p class="text-sm leading-5">${aboutContent.photoCaption}</p>
+  <div class="about-photo flex flex-col gap-3">
+    <div class="flex aspect-[4/5] items-end overflow-hidden rounded-[20px] border border-line bg-[#C9CFE8]">${person}</div>
+    <p class="text-sm leading-5 font-medium">${aboutContent.photoCaption}</p>
   </div>
 </section>`;

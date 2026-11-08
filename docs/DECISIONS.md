@@ -153,6 +153,12 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Why:** before, every script carried its own import and install. Now `dev-tools/package.json` holds the single dependency (`playwright-core`, official Microsoft package) and scripts import `dev-tools/browser.mjs` by relative path (for example `../../dev-tools/browser.mjs`). The specs in `site/tests/e2e/` are separate: they use `@playwright/test` from `site/`.
 - **Cost:** a script moved to a different depth needs its relative import fixed. `dev-tools/node_modules` must be installed once with pnpm.
 
+### D-26 Step 4 matches the reference's layout rules, not its section heights
+- **Decided by:** me, within D-07 and D-17.
+- **Why:** a live comparison found 48 exact copy matches with the reference, against D-07, so all placeholder copy was rewritten first. Once the copy is our own, line wraps differ, so equal section heights are not a meaningful target. Spacing, type, grid columns, widths and card proportions are matched instead.
+- **Result:** where line counts agree, heights match within 2 px (at 1280: work, process, plans, band, FAQ, CTA, footer). Remaining height gaps come from copy length. `reference-analysis/scripts/section-compare.mjs` measures; `copy-overlap.mjs` guards D-07.
+- **Not matched:** the accent font (the reference uses a commercial one), the Instagram embeds (our own placeholder cards), and button size below `md` (shared with the already-matched hero).
+
 ## Open: waiting for the owner
 
 | ID | Question | My recommendation |

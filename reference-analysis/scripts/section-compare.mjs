@@ -61,7 +61,7 @@ await browser.close();
 for (const width of viewportWidths) {
   console.log(`\nwidth ${width}   ref / ours / diff`);
   const reference = results[`ref-${width}`];
-  const ours = results[`ours-${width}`];
+  const ours = results[`ours-${width}`].filter((_, index) => index !== 2); // our marquee is a separate top-level section, the reference has no matching one
   for (let index = 0; index < Math.max(reference.length, ours.length); index += 1) {
     const referenceHeight = reference[index]?.section.h;
     const ourHeight = ours[index]?.section.h;
