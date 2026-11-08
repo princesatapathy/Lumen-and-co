@@ -1,10 +1,18 @@
-import './index.css';
+import './styles/index.css';
 import { initBehavior } from './behavior';
-import { faq } from './faq';
-import { footer } from './footer';
-import { header } from './header';
-import { hero, marquee } from './hero';
-import { about, band, cta, deliverables, plansSection, process, statement, work } from './sections';
+import { about } from './sections/about';
+import { band } from './sections/band';
+import { cta } from './sections/cta';
+import { deliverables } from './sections/deliverables';
+import { faq } from './sections/faq';
+import { footer } from './sections/footer';
+import { header } from './sections/header';
+import { hero } from './sections/hero';
+import { marquee } from './sections/marquee';
+import { plansSection } from './sections/plans';
+import { process } from './sections/process';
+import { statement } from './sections/statement';
+import { work } from './sections/work';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 if (!app) throw new Error('Missing #app mount point');

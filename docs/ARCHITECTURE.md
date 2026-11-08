@@ -17,7 +17,7 @@ A one-page marketing site for a fictional personal-branding studio, "Lumen & Co.
 ```mermaid
 flowchart TD
   A[index.html<br/>fonts + #app + script tag] --> B[main.ts]
-  B --> C[import index.css<br/>Tailwind + theme tokens + keyframes]
+  B --> C[import styles/index.css<br/>Tailwind + theme tokens + keyframes]
   B --> D[build one HTML string<br/>header + main sections + footer]
   D --> E[app.innerHTML = string]
   E --> F[initBehavior]
@@ -40,38 +40,41 @@ flowchart LR
 
 SEO and AEO background: `SEO-AEO-GUIDE.md`.
 
-## 3. Module map and dependency rule (Now)
+## 3. Module map and dependency rule
 
 ```mermaid
 flowchart LR
-  content[content.ts<br/>copy and lists] --> sections
-  ui[ui.ts<br/>star, eyebrow, h2, h3, button, person] --> sections
-  subgraph sections[section builders]
-    header[header.ts]
-    hero[hero.ts<br/>hero + reel + marquee]
-    body[sections.ts<br/>statement, work, deliverables,<br/>process, plans, band, about, cta]
-    faq[faq.ts]
-    footer[footer.ts]
+  content[content/<br/>brand, hero, sections: all copy] --> sections
+  components[components/<br/>icons, typography, button, layout, motion, reel] --> sections
+  subgraph sections[sections/ - one HTML builder per section]
+    s1[header, hero, marquee, statement, work,<br/>deliverables, process, plans, band,<br/>about, faq, cta, footer]
   end
   sections --> main[main.ts]
-  behavior[behavior.ts] --> main
-  css[index.css] --> main
+  behavior[behavior/<br/>menu, accordion, reveal] --> main
+  styles[styles/<br/>index.css = tailwind + theme + base] --> main
 ```
 
-Rule: **dependencies point one way**: content and ui feed the section builders, the builders feed `main.ts`. `behavior.ts` never imports sections. It finds elements through the DOM hooks listed in section 6.
+Rule: **dependencies point one way**: content and components feed the section builders, the builders feed `main.ts`. `content/` imports nothing (data only). `behavior/` never imports sections; it finds elements through the DOM hooks listed in section 6 and takes its two labels from `content/brand.ts`.
 
-### Target layout
+### Folder layout (done in Step 2a)
 
 ```
 site/src/
-  main.ts                  assemble + start behavior
-  styles/theme.css         tokens (@theme), keyframes, base rules: the only place colours/fonts/animations are defined
-  content/                 one file per section: all copy, typed; no copy anywhere else
-  components/              small pure helpers: button, eyebrow, heading, star, person
-  sections/                one file per section (header, hero, reel, marquee, statement, work, ...)
-  behavior/                mobile-menu, faq-accordion, scroll-reveal (+ index that starts all)
-site/tests/                the checks, as tests, plus golden screenshots
+  main.ts                  assemble the page, then start behavior
+  styles/index.css         imports Tailwind (scan limited to src/), theme.css and base.css
+  styles/theme.css         tokens (@theme): colours, fonts, keyframes and --animate-*; the brand block to swap on a rebrand
+  styles/base.css          base rules, responsive variables (--g, --secpad), .reveal
+  content/brand.ts         brand name, nav, footer, shared labels
+  content/hero.ts          hero, reel and marquee copy
+  content/sections.ts      copy for every section below the hero, plus lists (clips, steps, plans, faqs)
+  content/types.ts         AccentedHeading = lead + accent + tail
+  components/              icons, typography (eyebrow, h2, h3, head, accented), button, layout, motion, reel
+  sections/                one file per section
+  behavior/                menu, accordion, reveal, require-element, index (starts all)
+site/tests/                the checks, as tests, plus golden screenshots (git-ignored)
 ```
+
+Content strings are raw HTML (`&amp;`, `<br />`, typographic quotes are written as they render). A heading is `{ lead, accent, tail? }`; `accented()` wraps the accent in the italic accent style.
 
 ## 4. Styling architecture
 
@@ -104,7 +107,7 @@ There is no animation library. Every `animate-*` has `motion-reduce:animate-none
 
 ## 6. DOM hook contract
 
-`behavior.ts` and the checks depend on these names. Renaming one without updating the other breaks a check.
+`behavior/` and the checks depend on these names. Renaming one without updating the other breaks a check.
 
 | Hook | Used by |
 |---|---|
@@ -147,6 +150,27 @@ Today these are loose scripts in `site/tests/legacy-scripts/`. Target: one comma
 
 ## 9. Repo layout
 
-**Now (after Step 1):** `site/` (product, checks in `site/tests/`), `dev-tools/`, `reference-analysis/`, `design-source/` (stale), `docs/`, `archive/` (dead files, git-ignored). Site refactor and docs rewrite (Steps 2a-2c) still to do.
+Current tree (after Step 1; `git` ignores the folders marked *ignored*, see `README.md`):
 
-**Target:** see `REORGANIZATION-PLAN.md`.
+```
+Portfolio2/
+  README.md  .gitignore
+  site/                       product: Vite + TypeScript + Tailwind v4 (pnpm)
+    index.html  package.json  tsconfig.json  vite.config.ts
+    src/                      main.ts, styles/, content/, components/, sections/, behavior/ (section 3)
+    tests/                    ignored: legacy-scripts/, baseline/ (golden), output/, snapshot-dom.mjs
+  dev-tools/                  browser.mjs (the one Playwright import), range-server.mjs, package.json
+  reference-analysis/         measuring the live reference
+    scripts/  data/  specs/   tracked
+    videos/  screenshots/     ignored
+  design-source/              old design + Figma pipeline, STALE vs the site
+    scripts/  sections/  older/  tokens.*  responsive*.html  states.html  design-spec.md
+    screenshots/              ignored
+  docs/                       ARCHITECTURE, DECISIONS, REORGANIZATION-PLAN, REFERENCE-NOTES,
+                              FIGMA-HANDOFF, SEO-AEO-GUIDE, CONTENT-INTAKE, FILE-MANIFEST (historical)
+  archive/                    ignored: paper-era/, scratch/, design-export-duplicates/,
+                              unused-python-libs/, pre-reorg-backup zip
+  tools/                      empty leftover folder (locked by a process), to be removed
+```
+
+`site/src` layout: see section 3.

@@ -137,6 +137,22 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Why:** blocking a search bot removes the site from the answers that bot powers. Blocking only a training bot does not (O-09 covers those).
 - **Cost:** the pages can be read and quoted by those services. For a public marketing page that is the goal. Check each bot's name on the vendor's own crawler page before writing the file.
 
+### D-24 Step 1 executed; file manifest approved with F-1 to F-5 accepted
+- **Decided by:** owner, 2026-11-08, accepting every recommendation in `FILE-MANIFEST.md`.
+- **What was accepted:**
+  - F-1: `.libs/` (169 MB of unused Python libraries) is archived to `archive/unused-python-libs/`.
+  - F-2: `dev-tools/` uses pnpm; the old npm lock was replaced by `pnpm-lock.yaml`.
+  - F-3: `desktop-1280.html` stays in `design-source/older/` until Figma is re-synced (Step 6).
+  - F-4: `export-design.mjs` and `measure.mjs` are archived (they read Paper-era files).
+  - F-5: the root spec files are merged into `docs/REFERENCE-NOTES.md`. The originals stay in `reference-analysis/specs/`.
+- **Result:** files moved into `site/`, `dev-tools/`, `reference-analysis/`, `design-source/`, `docs/`, `archive/`. Nothing deleted (D-14). Site builds and baselines unchanged.
+- **Cost:** an empty `tools/` folder was left behind because a running process locks it; remove it later.
+
+### D-25 Helper scripts load Playwright through `dev-tools/browser.mjs`
+- **Decided by:** me, during Step 1, within D-03 and D-15.
+- **Why:** before, every script carried its own import and install. Now `dev-tools/package.json` holds the single dependency (`playwright-core`, official Microsoft package) and scripts import `dev-tools/browser.mjs` by relative path (for example `../../dev-tools/browser.mjs`).
+- **Cost:** a script moved to a different depth needs its relative import fixed. `dev-tools/node_modules` must be installed once with pnpm.
+
 ## Open: waiting for the owner
 
 | ID | Question | My recommendation |

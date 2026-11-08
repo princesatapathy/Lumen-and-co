@@ -1,3 +1,5 @@
+> **STALE.** This design was built from earlier reference numbers and no longer matches the site (docs/DECISIONS.md D-10, D-11: palette, 1084 px container, fluid type, 9:14 reel tiles). The site is the source of truth. Re-sync is Step 6; see docs/FIGMA-HANDOFF.md. Some paths below predate Step 1: the spec files named here are now in reference-analysis/specs/, and the Paper screenshots in archive/paper-era/screenshots/.
+
 # Design export (Paper -> anywhere) — Lumen & Co. desktop 1280
 
 Why this exists: Paper's free plan hit its weekly MCP limit on 2026-11-06. Everything that was written to Paper came from local files, so this folder is the complete, tool-independent copy of the design.

@@ -1,7 +1,8 @@
-import { faqs } from './content';
-import { acc, eyebrow, h2, sectionShell } from './ui';
+import { faqContent, faqs } from '../content/sections';
+import { accented, eyebrow, h2 } from '../components/typography';
+import { sectionShell } from '../components/layout';
 
-// One item open at a time; data-open on .faq is the single source of state (toggled in behavior.ts).
+// One item open at a time; data-open on .faq is the single source of state (toggled in behavior/accordion.ts).
 const item = ({ question, answer }: (typeof faqs)[number], index: number) => `<div class="faq group flex flex-col border-t border-line py-[25px]" data-open="${index === 0}">
   <button type="button" class="faq-q flex w-full cursor-pointer items-center justify-between gap-4 text-left transition-colors duration-150 hover:text-primary motion-reduce:transition-none" aria-expanded="${index === 0}" aria-controls="faq-answer-${index}">
     <span class="font-display text-[19px] leading-[25px] font-bold tracking-[-0.02em] md:text-[22px] md:leading-7">${question}</span>
@@ -13,6 +14,6 @@ const item = ({ question, answer }: (typeof faqs)[number], index: number) => `<d
 </div>`;
 
 export const faq = `<section id="faq" data-reveal class="${sectionShell} gap-12 bg-white">
-  <div class="flex flex-col gap-6">${eyebrow('06 — FAQ')}${h2(`Questions you might ${acc('have.')}`)}</div>
+  <div class="flex flex-col gap-6">${eyebrow(faqContent.eyebrow)}${h2(accented(faqContent.heading))}</div>
   <div class="flex flex-col border-b border-line">${faqs.map(item).join('')}</div>
 </section>`;

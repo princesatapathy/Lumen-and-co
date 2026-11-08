@@ -1,22 +1,70 @@
-// All page copy lives here. Placeholder copy for the fictional studio "Lumen & Co.".
+// Copy for every section below the hero, in page order. Headings are lead + accent + tail (see types.ts).
+import type { AccentedHeading } from './types';
 
-export const navLinks = [
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Plans', href: '#plans' },
-  { label: 'About', href: '#about' },
-  { label: 'FAQ', href: '#faq' },
-] as const;
+export const statementContent = {
+  eyebrow: 'OUR TAKE',
+  heading: { lead: 'Reach doesn’t open doors. ', accent: 'Recall', tail: ' does.' } satisfies AccentedHeading,
+  paragraphs: [
+    'Most content chases impressions. We build yours around one idea: that a stranger should be able to describe you after a single scroll. Your voice, your point of view, the one thing you stand for.',
+    'Numbers follow once people remember you. What we care about is what comes next: real conversations, new clients, and the kind of work you actually want to be doing.',
+  ],
+};
 
-export const reelColumns = [
-  ['3 tools I swear by', 'Day 12 of filming', 'Wait for the end…', 'Plain advice, once'],
-  ['POV: you are the expert', 'Quick tip for you', 'Same hook, new day', 'What I would redo'],
-  ['5 habits that stuck', 'Mistakes worth making', 'Behind the scenes', 'One honest take'],
-  ['Hook in three seconds', 'Stories beat stats', 'Film it once', 'Say it simply'],
-] as const;
+export const workContent = {
+  eyebrow: '01 — WORK',
+  heading: { lead: 'Recent ', accent: 'work.' } satisfies AccentedHeading,
+  lead: 'A few pieces from clients across coaching, health and tech. Placeholder clips for now; real ones land here later.',
+  profileButtonLabel: 'View profile',
+};
 
-export const marqueeBold = ['edits', 'Based in Lisbon', 'personal branding', 'strategy', 'scripts', 'shoots'];
-export const marqueeItalic = ['built for the long run', 'people, not just clicks', 'known, not just seen', 'real stories'];
+export const deliverablesContent = {
+  eyebrow: '02 — WHAT YOU GET',
+  heading: { lead: 'Everything your brand ', accent: 'needs.' } satisfies AccentedHeading,
+};
+
+export const processContent = {
+  eyebrow: '03 — HOW IT WORKS',
+  heading: { lead: 'From first call to a brand people ', accent: 'recall.' } satisfies AccentedHeading,
+  lead: 'A clear system, step by step. No guesswork.',
+  stepLabel: 'STEP',
+};
+
+export const plansContent = {
+  eyebrow: '04 — PLANS',
+  heading: { lead: 'Guidance, or ', accent: 'done for you.' } satisfies AccentedHeading,
+  lead: 'Two ways to work together. We will work out which one fits you best on a call, with no pressure at all.',
+  featuredBadge: 'MOST PICKED',
+};
+
+export const bandContent = {
+  badge: 'a fair warning →',
+  heading: { lead: 'Give it ', accent: 'a season.' } satisfies AccentedHeading,
+  lead: 'A personal brand does not form in a fortnight. People need time to notice you, recall you and begin to trust you. That is why we ask for three months. By then there is enough work and enough data to see what is landing, and to do more of it.',
+};
+
+export const aboutContent = {
+  eyebrow: '05 — WHO RUNS THIS',
+  quote: { lead: '“I began by sharing everything I knew, and slowly learned that people don’t follow content. They ', accent: 'remember people.', tail: '”' } satisfies AccentedHeading,
+  paragraphs: [
+    'I started out explaining ideas in plain pictures, a few minutes at a time. Years on, people still bring up one clip they saw and remember. That is when I understood what a personal brand really is.',
+    'Later I changed direction and started again from zero. It taught me how a brand is built: a real story, a clear message and a simple system.',
+    'Now the studio does the same for others.',
+  ],
+  secondaryCallToAction: 'Say hello on LinkedIn',
+  photoCaption: 'Founder, Lumen &amp; Co.',
+};
+
+export const faqContent = {
+  eyebrow: '06 — FAQ',
+  heading: { lead: 'Questions you might ', accent: 'have.' } satisfies AccentedHeading,
+};
+
+export const bookingContent = {
+  eyebrow: '07 — BOOK A CALL',
+  heading: { lead: '20 minutes. No pitch.<br />', accent: 'Just clarity.' } satisfies AccentedHeading,
+  lead: 'A relaxed conversation about how we could build your personal brand together.',
+  callToAction: 'Book a free call →',
+};
 
 export const clips = [
   { label: 'Watch clip 01 →', background: '#C9CFE8' },
@@ -72,8 +120,3 @@ export const faqs = [
   { question: 'Where are you based?', answer: 'We are based in Lisbon and work with clients remotely or on location.' },
   { question: 'I am a doctor, lawyer or therapist. Does this fit me?', answer: 'Yes. We take extra care with positioning and wording for regulated professions.' },
 ];
-
-export const footerColumns = [
-  { heading: 'STUDIO', links: [['Work', '#work'], ['Process', '#process'], ['Plans', '#plans'], ['About', '#about'], ['FAQ', '#faq']] },
-  { heading: 'CONNECT', links: [['hello@example.com', 'mailto:hello@example.com'], ['Book a call', '#book'], ['Instagram', '#'], ['YouTube', '#'], ['LinkedIn', '#']] },
-] as const;

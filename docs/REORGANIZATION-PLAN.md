@@ -1,7 +1,7 @@
 # Reorganization plan
 
 Goal: one clear structure for code, folders and docs, with **no visual change** to the site.
-Status: Step 0 and Step 1 done (2026-11-08). Steps 2 onward not started. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
+Status: Step 0 and Step 1 done (2026-11-08). Step 2 in progress: 2a site refactor and 2b tests (other workers), 2c docs. Steps 3 onward not started. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
 
 ## 1. Problems this fixes
 
