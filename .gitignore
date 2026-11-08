@@ -10,3 +10,5 @@ reference-analysis/videos/
 reference-analysis/screenshots/
 *.mp4
 design-source/screenshots/
+test-results/
+playwright-report/
