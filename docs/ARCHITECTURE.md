@@ -143,10 +143,10 @@ flowchart TD
   build[pnpm build<br/>tsc --noEmit + vite build] --> ok[clean build]
 ```
 
-Today these are loose scripts in `tools/`. Target: one command that runs all of them from `site/tests/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18).
+Today these are loose scripts in `site/tests/legacy-scripts/`. Target: one command that runs all of them from `site/tests/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18).
 
 ## 9. Repo layout
 
-**Now:** `site/` (product), `tools/` (88 mixed files), `design-export/`, `screenshots/` (439 files), `SSofdesktop/`, two videos and four overlapping spec files in the root.
+**Now (after Step 1):** `site/` (product, checks in `site/tests/`), `dev-tools/`, `reference-analysis/`, `design-source/` (stale), `docs/`, `archive/` (dead files, git-ignored). Site refactor and docs rewrite (Steps 2a-2c) still to do.
 
 **Target:** see `REORGANIZATION-PLAN.md`.

@@ -1,6 +1,6 @@
 # File manifest (Step 0): where every file goes
 
-Status: **proposed, waiting for the owner's approval.** Nothing has been moved.
+Status: **approved and executed in Step 1 (2026-11-08)** with all recommendations on F-1 to F-5 accepted; F-5 (merge root specs into `docs/REFERENCE-NOTES.md`) is still to do in step 2c. Deviations from the plan: `PAPER-MCP.md` moved to `docs/` untrimmed (copy in `archive/paper-era/`); design scripts live in `design-source/scripts/`; scripts import Playwright via `dev-tools/browser.mjs`; screenshot output of site checks goes to `site/tests/output/`; an empty `tools/` folder is locked by a running process and is to be removed later.
 Built from the files' own comments, dates and a search of which files mention which. "Evidence" says why a file is classed the way it is. The ones I am unsure about are listed in section 8.
 
 Safety already in place: git snapshot (`2e4bc97`, site and docs only), a zip of `tools/`, `design-export/` and the root notes in `archive/pre-reorg-backup-2026-11-07.zip` (7.5 MB, 155 entries), and golden baselines in `site/tests/baseline/` (screenshots at 375 / 768 / 1280, section heights, results of all checks: 28 pass, 0 fail).

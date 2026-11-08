@@ -1,0 +1,478 @@
+{
+ "url": "https://naveenrkcreates.com/",
+ "width": 1280,
+ "hover": {
+  "primary button (header)": {
+   "changed": {
+    "backgroundColor": "rgb(33, 63, 137) -> rgb(26, 50, 112)",
+    "translate": "none -> 0px -2px"
+   },
+   "transition": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+   "cursor": "pointer"
+  },
+  "primary button (hero)": {
+   "changed": {
+    "backgroundColor": "rgb(33, 63, 137) -> rgb(26, 50, 112)",
+    "translate": "none -> 0px -2px"
+   },
+   "transition": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+   "cursor": "pointer"
+  },
+  "secondary button (See our work)": {
+   "changed": {
+    "color": "rgb(17, 17, 17) -> rgb(33, 63, 137)",
+    "borderTopColor": "rgb(17, 17, 17) -> rgb(33, 63, 137)",
+    "translate": "none -> 0px -2px"
+   },
+   "transition": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+   "cursor": "pointer"
+  },
+  "nav link (Our work)": {
+   "changed": {
+    "color": "rgb(17, 17, 17) -> rgb(33, 63, 137)",
+    "borderTopColor": "rgb(17, 17, 17) -> rgb(33, 63, 137)"
+   },
+   "transition": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+   "cursor": "pointer"
+  },
+  "watch link": {
+   "changed": {
+    "textDecorationLine": "none -> underline"
+   },
+   "transition": "all 0s ease",
+   "cursor": "pointer"
+  },
+  "view profile chip": {
+   "error": "locator.scrollIntoViewIfNeeded: Timeout 3000ms exceeded."
+  },
+  "step card": {
+   "changed": {},
+   "transition": "all 0s ease",
+   "cursor": "auto"
+  },
+  "plan card (featured)": {
+   "changed": {},
+   "transition": "all 0s ease",
+   "cursor": "auto"
+  },
+  "footer link": {
+   "changed": {},
+   "transition": "all 0s ease",
+   "cursor": "pointer"
+  },
+  "faq row": {
+   "changed": {
+    "color": "rgb(17, 17, 17) -> rgb(33, 63, 137)",
+    "borderTopColor": "rgb(17, 17, 17) -> rgb(33, 63, 137)"
+   },
+   "transition": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+   "cursor": "default"
+  }
+ },
+ "focus": [
+  {
+   "el": "Naveen RK Creates",
+   "outline": "rgb(33, 63, 137) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  },
+  {
+   "el": "Our work",
+   "outline": "rgb(17, 17, 17) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  },
+  {
+   "el": "How it works",
+   "outline": "rgb(17, 17, 17) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  },
+  {
+   "el": "Packages",
+   "outline": "rgb(17, 17, 17) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  },
+  {
+   "el": "About",
+   "outline": "rgb(17, 17, 17) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  },
+  {
+   "el": "FAQ",
+   "outline": "rgb(17, 17, 17) solid 2px",
+   "outlineOffset": "3px",
+   "boxShadow": "none"
+  }
+ ],
+ "animations": [
+  {
+   "target": "P.rise inline-flex items-center gap-3 rounded-full b",
+   "name": "rise",
+   "duration": 800,
+   "easing": "linear",
+   "iterations": 1,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "translateY(22px)",
+     "opacity": "0"
+    },
+    {
+     "offset": 1,
+     "transform": "none",
+     "opacity": "1"
+    }
+   ]
+  },
+  {
+   "target": "SPAN.live-dot",
+   "name": "live-glow",
+   "duration": 2400,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "boxShadow": "rgba(46, 189, 89, 0.2) 0px 0px 0px 3px, rgba(46, 189, 89, 0.4) 0px 0px 8px 1px"
+    },
+    {
+     "offset": 0.5,
+     "boxShadow": "rgba(46, 189, 89, 0.12) 0px 0px 0px 6px, rgba(46, 189, 89, 0.6) 0px 0px 18px 5px"
+    },
+    {
+     "offset": 1,
+     "boxShadow": "rgba(46, 189, 89, 0.2) 0px 0px 0px 3px, rgba(46, 189, 89, 0.4) 0px 0px 8px 1px"
+    }
+   ]
+  },
+  {
+   "target": "H1.rise mt-7 text-[length:min(19vw,6.5rem)] font-extr",
+   "name": "rise",
+   "duration": 800,
+   "easing": "linear",
+   "iterations": 1,
+   "direction": "normal",
+   "delay": 90,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "translateY(22px)",
+     "opacity": "0"
+    },
+    {
+     "offset": 1,
+     "transform": "none",
+     "opacity": "1"
+    }
+   ]
+  },
+  {
+   "target": "path.[object SVGAnimatedString]",
+   "name": "scribble",
+   "duration": 900,
+   "easing": "linear",
+   "iterations": 1,
+   "direction": "normal",
+   "delay": 750,
+   "kf": [
+    {
+     "offset": 0,
+     "strokeDashoffset": "1px"
+    },
+    {
+     "offset": 1,
+     "strokeDashoffset": "0px"
+    }
+   ]
+  },
+  {
+   "target": "P.rise mt-9 max-w-2xl text-lg leading-[1.55] text-mu",
+   "name": "rise",
+   "duration": 800,
+   "easing": "linear",
+   "iterations": 1,
+   "direction": "normal",
+   "delay": 180,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "translateY(22px)",
+     "opacity": "0"
+    },
+    {
+     "offset": 1,
+     "transform": "none",
+     "opacity": "1"
+    }
+   ]
+  },
+  {
+   "target": "DIV.rise mt-9 flex flex-wrap gap-3 [animation-delay:27",
+   "name": "rise",
+   "duration": 800,
+   "easing": "linear",
+   "iterations": 1,
+   "direction": "normal",
+   "delay": 270,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "translateY(22px)",
+     "opacity": "0"
+    },
+    {
+     "offset": 1,
+     "transform": "none",
+     "opacity": "1"
+    }
+   ]
+  },
+  {
+   "target": "DIV.feed-track flex flex-col gap-3 pb-3 ",
+   "name": "feed",
+   "duration": 34000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "none"
+    },
+    {
+     "offset": 1,
+     "transform": "translateY(-50%)"
+    }
+   ]
+  },
+  {
+   "target": "DIV.feed-track flex flex-col gap-3 pb-3 reverse",
+   "name": "feed",
+   "duration": 41000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "reverse",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "none"
+    },
+    {
+     "offset": 1,
+     "transform": "translateY(-50%)"
+    }
+   ]
+  },
+  {
+   "target": "DIV.feed-track flex flex-col gap-3 pb-3 ",
+   "name": "feed",
+   "duration": 48000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "none"
+    },
+    {
+     "offset": 1,
+     "transform": "translateY(-50%)"
+    }
+   ]
+  },
+  {
+   "target": "FIGURE.feed-card relative w-[min(46%,210px)] lg:w-[min(50",
+   "name": "feed-card",
+   "duration": 7000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "rotate(-3deg) translateY(0px)"
+    },
+    {
+     "offset": 0.5,
+     "transform": "rotate(-2deg) translateY(-10px)"
+    },
+    {
+     "offset": 1,
+     "transform": "rotate(-3deg) translateY(0px)"
+    }
+   ]
+  },
+  {
+   "target": "DIV.marquee-track ",
+   "name": "marquee",
+   "duration": 60000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "normal",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "none"
+    },
+    {
+     "offset": 1,
+     "transform": "translate(-50%)"
+    }
+   ]
+  },
+  {
+   "target": "DIV.marquee-track reverse",
+   "name": "marquee",
+   "duration": 60000,
+   "easing": "linear",
+   "iterations": null,
+   "direction": "reverse",
+   "delay": 0,
+   "kf": [
+    {
+     "offset": 0,
+     "transform": "none"
+    },
+    {
+     "offset": 1,
+     "transform": "translate(-50%)"
+    }
+   ]
+  }
+ ],
+ "reveal": {
+  "text": "Views don't book calls. People",
+  "before": [
+   {
+    "tag": "H2",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "opacity, transform 0.65s, 0.65s ease, cubic-bezier(0.22, 1, 0.36, 1)"
+   }
+  ],
+  "mid": [
+   {
+    "tag": "H2",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "opacity, transform 0.65s, 0.65s ease, cubic-bezier(0.22, 1, 0.36, 1)"
+   }
+  ],
+  "after": [
+   {
+    "tag": "H2",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "all 0s ease"
+   },
+   {
+    "tag": "DIV",
+    "opacity": "1",
+    "transform": "none",
+    "transition": "opacity, transform 0.65s, 0.65s ease, cubic-bezier(0.22, 1, 0.36, 1)"
+   }
+  ]
+ },
+ "faq": {
+  "samples": [
+   {
+    "t": 0,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 63,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 125,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 188,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 251,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 313,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 375,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 438,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   },
+   {
+    "t": 500,
+    "h": 0,
+    "op": "1",
+    "tr": "all 0s ease"
+   }
+  ],
+  "icon": "none"
+ }
+}

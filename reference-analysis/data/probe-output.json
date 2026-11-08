@@ -1,0 +1,691 @@
+{
+ "controls": [
+  {
+   "tag": "A",
+   "text": "Naveen RK Creates",
+   "href": "/#top",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Our work",
+   "href": "/#work",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "How it works",
+   "href": "/#how",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Packages",
+   "href": "/#packages",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "About",
+   "href": "/#about",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "FAQ",
+   "href": "/#faq",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Open menu",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Our work",
+   "href": "/#work",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "How it works",
+   "href": "/#how",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Packages",
+   "href": "/#packages",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "About",
+   "href": "/#about",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "FAQ",
+   "href": "/#faq",
+   "target": null,
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": true,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "See our work",
+   "href": "#work",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/DfFF-ecSTKh/",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/De_XCv5yRvV/",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/DfCceCfSG88/",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Connect on LinkedIn",
+   "href": "https://linkedin.com/in/naveen-rk",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Do I need a lot of followers to start?",
+   "href": null,
+   "target": null,
+   "expanded": "true",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "When will I see results?",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "I'm not comfortable on camera. Is that o",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Can I just take the strategy?",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Which platform do you work on?",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "Where are you based?",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "BUTTON",
+   "text": "I'm a doctor, lawyer or therapist. Does ",
+   "href": null,
+   "target": null,
+   "expanded": "false",
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Book a free call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": false
+  },
+  {
+   "tag": "A",
+   "text": "Naveen RK Creates",
+   "href": "/#top",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "Our work",
+   "href": "/#work",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "How it works",
+   "href": "/#how",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "Packages",
+   "href": "/#packages",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "About",
+   "href": "/#about",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "FAQ",
+   "href": "/#faq",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "naveenrk@naveenrkcreates.com",
+   "href": "mailto:naveenrk@naveenrkcreates.com",
+   "target": null,
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "Book a call",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "Instagram",
+   "href": "https://instagram.com/naveenrkcreates",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "YouTube",
+   "href": "https://youtube.com/@naveenrkcreates",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  },
+  {
+   "tag": "A",
+   "text": "LinkedIn",
+   "href": "https://linkedin.com/in/naveen-rk",
+   "target": "_blank",
+   "expanded": null,
+   "inHeader": false,
+   "inFooter": true
+  }
+ ],
+ "navClicks": [
+  {
+   "id": "work",
+   "sectionTopPx": 80,
+   "headerH": 73,
+   "url": "#work",
+   "scrollY": 1502,
+   "smooth": "smooth",
+   "scrollMarginTop": "0px"
+  },
+  {
+   "id": "how",
+   "sectionTopPx": 80,
+   "headerH": 73,
+   "url": "#how",
+   "scrollY": 3361,
+   "smooth": "smooth",
+   "scrollMarginTop": "0px"
+  },
+  {
+   "id": "packages",
+   "sectionTopPx": 80,
+   "headerH": 73,
+   "url": "#packages",
+   "scrollY": 4386,
+   "smooth": "smooth",
+   "scrollMarginTop": "0px"
+  },
+  {
+   "id": "about",
+   "sectionTopPx": 83,
+   "headerH": 73,
+   "url": "#about",
+   "scrollY": 5698,
+   "smooth": "smooth",
+   "scrollMarginTop": "0px"
+  },
+  {
+   "id": "faq",
+   "sectionTopPx": 103,
+   "headerH": 73,
+   "url": "#faq",
+   "scrollY": 6603,
+   "smooth": "smooth",
+   "scrollMarginTop": "0px"
+  }
+ ],
+ "faq": {
+  "count": 7,
+  "initial": [
+   "true",
+   "false",
+   "false",
+   "false",
+   "false",
+   "false",
+   "false"
+  ],
+  "afterClick2nd": [
+   "false",
+   "true",
+   "false",
+   "false",
+   "false",
+   "false",
+   "false"
+  ]
+ },
+ "ctaHrefs": [
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/DfFF-ecSTKh/",
+   "target": "_blank"
+  },
+  {
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/De_XCv5yRvV/",
+   "target": "_blank"
+  },
+  {
+   "text": "Watch on Instagram →",
+   "href": "https://www.instagram.com/reel/DfCceCfSG88/",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Connect on LinkedIn",
+   "href": "https://linkedin.com/in/naveen-rk",
+   "target": "_blank"
+  },
+  {
+   "text": "Book a free call →",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "naveenrk@naveenrkcreates.com",
+   "href": "mailto:naveenrk@naveenrkcreates.com",
+   "target": ""
+  },
+  {
+   "text": "Book a call",
+   "href": "https://cal.com/naveenrkcreates/instagram-strategy-call",
+   "target": "_blank"
+  },
+  {
+   "text": "Instagram",
+   "href": "https://instagram.com/naveenrkcreates",
+   "target": "_blank"
+  },
+  {
+   "text": "YouTube",
+   "href": "https://youtube.com/@naveenrkcreates",
+   "target": "_blank"
+  },
+  {
+   "text": "LinkedIn",
+   "href": "https://linkedin.com/in/naveen-rk",
+   "target": "_blank"
+  }
+ ],
+ "mobileMenu": {
+  "burgerLabel": "Open menu",
+  "expandedBefore": "false",
+  "expandedAfter": "true",
+  "afterLinkTap": {
+   "menuHidden": true,
+   "packagesTop": 85
+  }
+ },
+ "mobileWorkRow": {
+  "cls": "-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 [scrollbar-wi",
+  "scrollW": 950,
+  "clientW": 375,
+  "snap": "x mandatory"
+ },
+ "iframeSizes": [
+  "291x518",
+  "291x518",
+  "291x518"
+ ],
+ "tokens": {
+  "body": {
+   "fontFamily": "Inter, ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "17px",
+   "fontWeight": "400",
+   "lineHeight": "27.2px",
+   "letterSpacing": "normal",
+   "color": "rgb(17, 17, 17)",
+   "backgroundColor": "rgb(245, 241, 232)"
+  },
+  "h1": {
+   "fontFamily": "\"Bricolage Grotesque\", ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "122.88px",
+   "fontWeight": "800",
+   "lineHeight": "110.592px",
+   "letterSpacing": "-9.216px",
+   "color": "rgb(17, 17, 17)"
+  },
+  "h2": {
+   "fontFamily": "\"Bricolage Grotesque\", ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "64px",
+   "fontWeight": "800",
+   "lineHeight": "64px",
+   "letterSpacing": "-2.88px",
+   "color": "rgb(17, 17, 17)"
+  },
+  "h3": {
+   "fontFamily": "\"Bricolage Grotesque\", ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "28px",
+   "fontWeight": "700",
+   "lineHeight": "35px",
+   "letterSpacing": "-0.84px",
+   "color": "rgb(17, 17, 17)"
+  },
+  "p": {
+   "fontFamily": "Inter, ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "600",
+   "lineHeight": "16px",
+   "letterSpacing": "0.96px",
+   "color": "rgb(17, 17, 17)"
+  },
+  "eyebrow": {
+   "fontFamily": "Inter, ui-sans-serif, system-ui, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "600",
+   "lineHeight": "16px",
+   "letterSpacing": "1.68px",
+   "color": "rgb(74, 70, 64)"
+  },
+  "headerBtn": {
+   "backgroundColor": "rgba(0, 0, 0, 0)",
+   "color": "rgb(17, 17, 17)",
+   "borderRadius": "0px",
+   "paddingTop": "0px",
+   "paddingLeft": "0px",
+   "fontSize": "18px",
+   "fontWeight": "800"
+  },
+  "container": {
+   "maxWidth": "1180px",
+   "paddingLeft": "48px",
+   "paddingRight": "48px"
+  },
+  "sectionPad": [
+   {
+    "id": "",
+    "bg": "rgba(0, 0, 0, 0)",
+    "pt": "0px",
+    "pb": "0px"
+   },
+   {
+    "id": "",
+    "bg": "rgb(255, 255, 255)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "work",
+    "bg": "rgb(245, 241, 232)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "",
+    "bg": "rgb(255, 255, 255)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "how",
+    "bg": "rgb(245, 241, 232)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "packages",
+    "bg": "rgb(255, 255, 255)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "",
+    "bg": "rgb(33, 63, 137)",
+    "pt": "96px",
+    "pb": "96px"
+   },
+   {
+    "id": "about",
+    "bg": "rgb(245, 241, 232)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "faq",
+    "bg": "rgb(255, 255, 255)",
+    "pt": "112px",
+    "pb": "112px"
+   },
+   {
+    "id": "contact",
+    "bg": "rgba(0, 0, 0, 0)",
+    "pt": "112px",
+    "pb": "112px"
+   }
+  ],
+  "headerH": 73,
+  "stepCard": null,
+  "priceCard": null
+ },
+ "breakpoints": [
+  "@media(prefers-reduced-motion:reduce)",
+  "@media(min-width:1024px)",
+  "@media(hover:hover)",
+  "@media(prefers-reduced-motion:no-preference)",
+  "@media(min-width:40rem)",
+  "@media(min-width:48rem)",
+  "@media(min-width:64rem)"
+ ]
+}

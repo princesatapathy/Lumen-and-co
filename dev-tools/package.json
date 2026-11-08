@@ -1,0 +1,10 @@
+{
+  "name": "dev-tools",
+  "private": true,
+  "type": "module",
+  "description": "Shared Playwright launcher for the helper scripts (checks, reference measuring, Figma capture). Not part of the shipped site.",
+  "packageManager": "pnpm@9.15.9",
+  "dependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}
