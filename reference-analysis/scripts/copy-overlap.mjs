@@ -15,7 +15,7 @@ const readTextBlocks = async (url) => {
       .filter((element) => [...element.childNodes].some((node) => node.nodeType === 3 && node.textContent.trim()))
       .map((element) => element.textContent),
     ...[...document.querySelectorAll('[aria-label],[alt],[title],[placeholder]')].flatMap((element) => ['aria-label', 'alt', 'title', 'placeholder'].map((name) => element.getAttribute(name) ?? '')),
-    ...[...document.querySelectorAll('meta[name="description"],meta[property^="og:"],meta[name^="twitter:"]')].map((element) => element.getAttribute('content') ?? ''),
+    ...[...document.querySelectorAll('meta[name="description"],meta[property^="og:"]:not([property="og:type"]),meta[name^="twitter:"]:not([name="twitter:card"])')].map((element) => element.getAttribute('content') ?? ''),
     document.title,
   ].filter((text) => text.trim()));
   await page.close();
