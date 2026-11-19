@@ -16,7 +16,7 @@ A one-page marketing site for a fictional personal-branding studio, "Lumen & Co.
 
 ```mermaid
 flowchart TD
-  A[index.html<br/>fonts + #app + script tag] --> B[main.ts]
+  A[index.html<br/>font preloads + #app + script tag] --> B[main.ts]
   B --> C[import styles/index.css<br/>Tailwind + theme tokens + keyframes]
   B --> D[build one HTML string<br/>header + main sections + footer]
   D --> E[app.innerHTML = string<br/>dev server only: production HTML already has the page]

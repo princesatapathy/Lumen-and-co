@@ -19,7 +19,7 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Decided by:** owner ("only downloads from the original websites, not unauthorized or second-party packages").
 - **Why:** supply-chain safety.
 - **Result:** four direct dependencies, all first-party: `vite` (vitejs), `typescript` (Microsoft), `tailwindcss` and `@tailwindcss/vite` (Tailwind Labs). Publisher checked on npm for each. React and `@types/react` were installed once and removed.
-- **Cost:** their own sub-dependencies still come with them. That cannot be avoided. Fonts load from Google Fonts.
+- **Cost:** their own sub-dependencies still come with them. That cannot be avoided. Fonts were loaded from Google Fonts until D-28; they are now self-hosted.
 
 ### D-04 Package manager: pnpm
 - **Decided by:** owner. `packageManager` is pinned in `site/package.json`.
@@ -165,8 +165,16 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **What:** `build/prerender-plugin.ts` writes the page into `#app` on build only. `build/seo-plugin.ts` adds title, description, canonical, Open Graph, Twitter card, an inline SVG favicon and JSON-LD (Organization, WebSite, FAQPage) in dev and build, and emits `robots.txt` (allow all), `sitemap.xml` and `llms.txt`. Page-level facts live in `src/content/meta.ts`.
 - **Left out on purpose:** `og:image` (no image asset yet), address, phone, social links and service area in JSON-LD (no real facts yet, D-22), named bots in `robots.txt` (O-09 default is allow; names not verified on vendor pages).
 - **Measured** (Chrome, 375 px, 4x CPU slowdown, slow-4G network, 7 runs, medians, run twice): FCP, LCP and CLS did not improve for human visitors. The LCP element is the hero h1 in both versions and the runs differ more from each other than from the baseline. The benefit is for crawlers and visitors without JavaScript: the h1, all FAQ answers and both plans are in the HTML.
-- **Open, owner to decide:** CLS is 0.149 before and after, above the 0.1 "good" limit. One shift of the hero text, the reel and the entrance-animated blocks when the web font swaps in. Fixes (preloading the fonts, self-hosting them, or a fallback font with matched metrics) change how the hero loads, so they were not part of a no-visual-change step. Lighthouse was not run.
+- **Layout shift:** CLS was 0.149 before and after prerender, above the 0.1 "good" limit (one shift of the hero text, the reel and the entrance-animated blocks when the web font swapped in). Fixed in D-28.
 - **Not verified:** the JSON-LD in Google's Rich Results test (needs a public URL).
+
+### D-28 Fonts are self-hosted and preloaded (fixes the layout shift)
+- **Decided by:** me, after the owner said "fix layout shift".
+- **Cause:** at 375 px the fallback font is wider than Bricolage Grotesque, so the hero headline wrapped onto more lines until the web font arrived. The hero's reel fills the space under the headline, so it grew by about 64 px when the font swapped in. At 1280 px there was no shift.
+- **What:** the eight latin and latin-ext font files Google Fonts serves (the same files, so glyphs are identical; SIL Open Font License) now live in `site/public/fonts/`, declared in `src/styles/fonts.css`. The latin files of the three hero fonts are preloaded in `index.html`. The Google stylesheet and preconnects are gone: one less render-blocking cross-origin request, and visitors' browsers no longer contact Google (relevant for an EU business).
+- **Result** (same measurement as D-27, A/B in one session, run twice): CLS 0.149 to 0.036 (under the 0.1 limit); 0 without network throttling. First and largest paint unchanged within noise. 23 specs pass, page heights match the golden baselines, and no character on the page needs a dropped subset.
+- **Left:** 0.036 remains on a slow network, where the fonts still arrive after first paint. A fallback font with matched metrics would remove it; not worth the extra CSS yet.
+- **Cost:** 320 KB of font files in the repo. Cyrillic, Greek and Vietnamese subsets are not included; add them to `fonts.css` if real copy needs them. Updating a font means re-downloading the files by hand.
 
 ## Open: waiting for the owner
 
