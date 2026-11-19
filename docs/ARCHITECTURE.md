@@ -19,7 +19,7 @@ flowchart TD
   A[index.html<br/>fonts + #app + script tag] --> B[main.ts]
   B --> C[import styles/index.css<br/>Tailwind + theme tokens + keyframes]
   B --> D[build one HTML string<br/>header + main sections + footer]
-  D --> E[app.innerHTML = string]
+  D --> E[app.innerHTML = string<br/>dev server only: production HTML already has the page]
   E --> F[initBehavior]
   F --> F1[initMenu<br/>burger toggles data-menu-open]
   F --> F2[initFaq<br/>one item open at a time]
@@ -27,16 +27,20 @@ flowchart TD
   E --> G[CSS does the rest<br/>animations, hover, responsive layout]
 ```
 
-Consequence: the page is blank until the JS bundle runs (no prerender). Decision D-05, superseded by D-20: Step 5 adds a build-time prerender, so the finished HTML is already in the file and the browser only attaches behavior. Target build flow:
+Since Step 5 (D-20) the finished HTML is already in `dist/index.html`, so in production the browser only attaches behavior. `main.ts` renders the page itself only on the dev server (`import.meta.env.DEV`), where `#app` starts empty; the production JS therefore no longer contains the page text (about 27 kB down to 2 kB). Build flow:
 
 ```mermaid
 flowchart LR
-  src[section builders + content] --> vite[vite build<br/>JS + CSS bundles]
-  src --> pre[prerender script<br/>renders the same builders to HTML]
-  vite --> dist[dist/]
-  pre -->|writes content, head tags, JSON-LD| dist
-  extra[robots.txt + sitemap.xml + llms.txt] --> dist
+  src[section builders + content] --> page[src/page.ts<br/>whole page as one string]
+  page --> pre[build/prerender-plugin.ts<br/>puts the page into #app]
+  src --> seo[build/seo-plugin.ts<br/>head tags, JSON-LD, robots, sitemap, llms.txt]
+  idx[index.html] --> vite[vite build]
+  pre --> vite
+  seo --> vite
+  vite --> dist[dist/<br/>index.html with content, 2 kB JS, CSS, crawler files]
 ```
+
+Both plugins are registered in `vite.config.ts`. Head tags also appear on the dev server. The site address is a placeholder (`siteUrl` in `src/content/meta.ts`) until a domain exists (O-11). Build code lives in `site/build/`, outside `src/`, so Tailwind never scans it for class names.
 
 SEO and AEO background: `SEO-AEO-GUIDE.md`.
 
@@ -145,7 +149,7 @@ flowchart TD
   build[pnpm build<br/>tsc --noEmit + vite build] --> ok[clean build]
 ```
 
-`cd site; pnpm test` runs these as 18 specs in `site/tests/e2e/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18). Pixel diff against the golden screenshots is not automated: `site/tests/legacy-scripts/pixdiff.mjs` has no spec and must be run by hand.
+`cd site; pnpm test` builds the site, then runs these as 23 specs (including `built-page.spec.ts`, which reads `dist/` from disk: content without JavaScript, head tags, JSON-LD against the visible FAQ, crawler files) in `site/tests/e2e/` with `@playwright/test`, a dev-only dependency that is never part of the built site (D-15). The tests and their golden screenshots are not tracked by git (D-18). Pixel diff against the golden screenshots is not automated: `site/tests/legacy-scripts/pixdiff.mjs` has no spec and must be run by hand.
 
 ## 9. Repo layout
 

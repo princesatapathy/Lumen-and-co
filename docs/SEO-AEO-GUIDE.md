@@ -30,7 +30,7 @@ flowchart LR
   S --> A[Result list or<br/>generated answer with citation]
 ```
 
-A page can fail at any stage, and you fix them in this order. **Our site fails at stage 2 today**: the HTML a bot downloads is an empty `<div id="app">`, and the content only appears after JavaScript runs. Google can run JavaScript, though later and less reliably. Many other crawlers are reported not to run it **(unverified)**. Prerendering puts the finished HTML in the file so stages 1 and 2 cannot fail.
+A page can fail at any stage, and you fix them in this order. **Our site used to fail at stage 2**: the HTML a bot downloaded was an empty `<div id="app">`, and the content only appeared after JavaScript ran. Step 5 fixed that: the built `dist/index.html` contains the whole page. Google can run JavaScript, though later and less reliably. Many other crawlers are reported not to run it **(unverified)**. Prerendering puts the finished HTML in the file so stages 1 and 2 cannot fail.
 
 ## 3. The six layers and what each means for this site
 
@@ -94,6 +94,8 @@ Engines choose whom to quote partly by who else vouches for you: consistent prof
 | Asking the engines | Monthly, ask ChatGPT, Perplexity, Gemini and Claude about the business by name and by topic; log who gets cited | your time |
 
 ## 6. What we build, and when
+
+Status: items 1 to 4 and the first two checks of item 7 are built (Step 5, D-27). Item 5 was measured but not changed (D-27, CLS 0.149 is open). Item 6 waits for real facts (D-22).
 
 Order in `REORGANIZATION-PLAN.md`: cleanup (steps 0 to 3), compare the lower sections (step 4), then **step 5 = prerender plus this guide's layers A to E**, then Figma re-sync.
 

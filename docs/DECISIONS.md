@@ -24,11 +24,11 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 ### D-04 Package manager: pnpm
 - **Decided by:** owner. `packageManager` is pinned in `site/package.json`.
 
-### D-05 Render in the browser, no prerendering (superseded by D-20)
+### D-05 Render in the browser, no prerendering (superseded by D-20, done in Step 5)
 - **Decided by:** me. Prerender was out of scope unless asked.
 - **Why:** smallest working version.
 - **Cost:** blank page until JS runs, weaker for search engines and link previews.
-- **Status:** the owner asked for prerendering and SEO/AEO (D-20). Until Step 5 ships, the site still renders in the browser.
+- **Status:** replaced. The production build now ships the finished HTML (D-20, D-27). Only the dev server still renders in the browser.
 
 ### D-06 Motion is pure CSS plus one IntersectionObserver
 - **Decided by:** me, after the owner asked how motion graphics are done.
@@ -111,7 +111,7 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Decided by:** owner ("yes, I need to learn how we can optimise for SEO and AEO").
 - **Supersedes:** the "no prerendering" part of D-05.
 - **What:** the learning material is `SEO-AEO-GUIDE.md`. The build work is Step 5 of the plan: build-time prerender, head tags, JSON-LD, `robots.txt`, `sitemap.xml`, performance pass, answer-shaped copy.
-- **How prerender is done:** a small script of our own that renders the existing section builders into `dist/index.html`, with Vite (already installed) loading the TypeScript. No new dependency, which keeps D-03 intact. The browser then skips re-rendering and only attaches behavior.
+- **How prerender is done (built in Step 5, see D-27):** two small Vite plugins of our own in `site/build/` render the existing section builders into `dist/index.html` and write the head tags and crawler files, with Vite (already installed) loading the TypeScript. No new dependency, which keeps D-03 intact. The browser then skips re-rendering and only attaches behavior.
 - **Includes `llms.txt`:** the owner wants it anyway ("why not": it is a small file, costs almost nothing, and some tools may read it). It is generated at build time from the same copy file as the page, so it cannot go out of date. Expectation, stated honestly: no evidence yet that it changes rankings or citations, and Google says it is not needed. It is a cheap extra, not a lever.
 - **Not promised:** rankings or citations.
 - **Depends on:** D-22 (real business facts) and D-23 (bot policy).
@@ -160,13 +160,21 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Not matched:** the accent font (the reference uses a commercial one) and the Instagram embeds (our own placeholder cards).
 - **Open, owner to decide:** below `md` our buttons are 15 px with 20 px side padding, the reference uses 16 px with 28 px. Fixing it moves the hero, which was not part of this step.
 
+### D-27 Step 5 built: prerender and SEO files in two Vite plugins, speed did not change
+- **Decided by:** me, within D-20 and D-23.
+- **What:** `build/prerender-plugin.ts` writes the page into `#app` on build only. `build/seo-plugin.ts` adds title, description, canonical, Open Graph, Twitter card, an inline SVG favicon and JSON-LD (Organization, WebSite, FAQPage) in dev and build, and emits `robots.txt` (allow all), `sitemap.xml` and `llms.txt`. Page-level facts live in `src/content/meta.ts`.
+- **Left out on purpose:** `og:image` (no image asset yet), address, phone, social links and service area in JSON-LD (no real facts yet, D-22), named bots in `robots.txt` (O-09 default is allow; names not verified on vendor pages).
+- **Measured** (Chrome, 375 px, 4x CPU slowdown, slow-4G network, 7 runs, medians, run twice): FCP, LCP and CLS did not improve for human visitors. The LCP element is the hero h1 in both versions and the runs differ more from each other than from the baseline. The benefit is for crawlers and visitors without JavaScript: the h1, all FAQ answers and both plans are in the HTML.
+- **Open, owner to decide:** CLS is 0.149 before and after, above the 0.1 "good" limit. One shift of the hero text, the reel and the entrance-animated blocks when the web font swaps in. Fixes (preloading the fonts, self-hosting them, or a fallback font with matched metrics) change how the hero loads, so they were not part of a no-visual-change step. Lighthouse was not run.
+- **Not verified:** the JSON-LD in Google's Rich Results test (needs a public URL).
+
 ## Open: waiting for the owner
 
 | ID | Question | My recommendation |
 |---|---|---|
 | O-09 | Training bots (GPTBot, ClaudeBot, Google-Extended): allow or block? Blocking them does not remove the site from AI search (D-23) | The friend's call, since it is his content. Default if undecided: allow, matching the "findable" goal |
 | O-10 | Brand identity for launch: does the friend have his own colours, fonts, logo and photos, or should we design them? Is his business in the same field as the reference? | Use his own identity, so the site stops looking like the reference. The palette is one block in `theme.css`, so swapping is cheap |
-| O-11 | Where will it be hosted, what domain, and how does the friend preview it? | A static host with preview links (static output suits this site). Pick after Step 4 |
+| O-11 | Where will it be hosted, what domain, and how does the friend preview it? | A static host with preview links (static output suits this site). Pick after Step 4. **Launch checklist: set `siteUrl` in `site/src/content/meta.ts`** (canonical, sitemap and robots.txt use it; today it is `https://example.com`) |
 | O-12 | Who supplies the content in `CONTENT-INTAKE.md`, and by when? | The friend, filling the sheet once; the owner then edits `content/` |
 
 ## Superseded
