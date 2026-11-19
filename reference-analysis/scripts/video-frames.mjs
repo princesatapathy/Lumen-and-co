@@ -10,7 +10,7 @@ if (!mode || !videoPath) throw new Error('usage: node video-frames.mjs probe|fra
 const ORIGIN = 'http://localhost:8766';
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--autoplay-policy=no-user-gesture-required'] });
 const page = await browser.newPage({ viewport: { width: 1000, height: 1000 } });
-await page.goto(ORIGIN + '/design-source/responsive.html'); // any real same-origin page; content replaced below
+await page.goto(ORIGIN + '/design-source/README.md'); // any real same-origin page; content replaced below
 await page.setContent(`<body style="margin:0;background:#000"><video id="v" muted preload="auto" crossorigin="anonymous" style="display:block;max-height:960px;max-width:980px"></video></body>`);
 const meta = await page.evaluate(async (src) => {
   const v = document.getElementById('v');

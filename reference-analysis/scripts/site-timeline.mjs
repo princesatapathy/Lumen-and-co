@@ -10,7 +10,7 @@ const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google
 
 async function sheet(files, outDir, prefix, thumbWidth) {
   const p = await browser.newPage({ viewport: { width: 1800, height: 1000 } });
-  await p.goto(ORIGIN + '/design-source/responsive.html');
+  await p.goto(ORIGIN + '/design-source/README.md');
   const rel = outDir.replace(/^\.\.\//, '');
   for (let i = 0; i < files.length; i += 12) {
     const cells = files.slice(i, i + 12).map(f => `<figure style="margin:0;color:#fff;font:14px sans-serif;text-align:center"><img src="${ORIGIN}/${rel}/${f.name}" style="width:${thumbWidth}px;display:block"><figcaption>${f.label}</figcaption></figure>`).join('');
