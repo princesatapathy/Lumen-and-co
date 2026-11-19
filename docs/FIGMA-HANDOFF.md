@@ -14,11 +14,9 @@ File "Lumen & Co. - Portfolio", key `RRm7sOaYLwqevFsApSrMcZ` (https://www.figma.
 | Tablet 768 v3 (site) | `27:2` | 768 x 9467 | current |
 | Mobile 375 v3 (site) | `28:2` | 375 x 11600 | current |
 | Mobile 375 menu open v3 (site) | `29:2` | 375 x 11965 | current |
-| Desktop 1280 v2, Tablet 768 v2, Mobile 375 v2, Mobile 375 menu open v2 | `19:2`, `20:2`, `22:2`, `21:2` | | stale (2026-11-06 generator) |
 | States and motion 1280 | `17:2` | 1280 x 4912 | stale (old palette and type); not regenerated |
-| Desktop 1280 (v1), Tablet 768 (v1), Mobile 375 (v1) | `1:2`, `3:2`, `4:2` | | stale |
 
-The v3 sizes equal the golden baselines in `site/tests/baseline/` (8751 / 9467 / 11600). The old frames are kept: the owner decides when to delete them (nothing was deleted in Figma).
+The v3 sizes equal the golden baselines in `site/tests/baseline/` (8751 / 9467 / 11600). The old v1 and v2 frames (ids `1:2`, `3:2`, `4:2`, `19:2`, `20:2`, `21:2`, `22:2`) were deleted on 2026-11-19 at the owner's request. Figma's version history can restore them; the HTML they came from is in `archive/design-source-old/`.
 
 Not verified: the v3 frames were checked by size and by looking at the 1280 and menu-open captures at low resolution, not by a pixel diff against the page. Hover, focus and motion are not in Figma. Closed FAQ answers exist as 0-height clipped nodes. The capture drops CSS `outline`.
 
