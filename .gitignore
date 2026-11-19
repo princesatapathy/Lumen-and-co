@@ -13,3 +13,6 @@ design-source/screenshots/
 test-results/
 playwright-report/
 reference-analysis/data/section-compare-*.json
+
+# Packaged build for sharing (made by hand, not tracked)
+*.zip

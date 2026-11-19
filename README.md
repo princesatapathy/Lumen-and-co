@@ -1,6 +1,6 @@
 # Lumen & Co. portfolio
 
-A one-page marketing site for a personal-branding studio. "Lumen & Co." is a placeholder brand; the site is being built for the owner's friend's real business, whose facts will replace the placeholders (`docs/DECISIONS.md` D-22, `docs/CONTENT-INTAKE.md`). Layout and motion follow a live reference site, with our own copy and assets only.
+A one-page portfolio website made for a marketing agency. "Lumen & Co." is a placeholder brand; the site is being built for the owner's friend's real business, whose facts will replace the placeholders (`docs/DECISIONS.md` D-22, `docs/CONTENT-INTAKE.md`). Layout and motion follow a live reference site, with our own copy and assets only.
 
 Stack: TypeScript, Tailwind CSS v4, Vite. No UI framework. Package manager is **pnpm**. Dependencies come only from official publishers (D-03).
 
