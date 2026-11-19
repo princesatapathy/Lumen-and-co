@@ -65,7 +65,7 @@ Sections alternate white and paper. One full-bleed primary band. Footer is ink.
 | Alternate section background | `#FFFFFF` |
 | Hero reel tile background | `#D8D1C2` |
 
-The earlier Paper-era design used its own palette (paper `#F3F1EA`, primary `#2D3FA6`, ink `#12130F`). That is **STALE** and survives only in `design-source/` and the Figma frames.
+The earlier Paper-era design used its own palette (paper `#F3F1EA`, primary `#2D3FA6`, ink `#12130F`). That is **STALE** and survives only in `archive/design-source-old/` and the older Figma frames (v1, v2, states sheet).
 
 ### Type
 Fonts in use: Bricolage Grotesque (display 700/800), Inter (body 400/600), an italic serif for accent words. Eyebrow: Inter 600, uppercase, 12 px, letter-spacing 0.14em (the live eyebrow measures 1.68 px, which is 0.14em at 12 px).

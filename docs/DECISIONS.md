@@ -53,7 +53,7 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 ### D-10 Design tokens live in one place: the Tailwind `@theme` block
 - **Decided by:** me.
 - **Values (live reference, 2026-11-07):** paper `#F5F1E8`, card `#FBF9F4`, line `#E2DCCD`, ink `#111`, muted `#4A4640`, primary `#213F89`, primary-dim `#1A3270`.
-- **Cost:** `design-source/tokens.css` and `tokens.json` are now duplicates and stale.
+- **Cost:** `design-source/tokens.css` and `tokens.json` were duplicates and stale; they are in `archive/design-source-old/` since Step 6 (D-29).
 
 ### D-11 Layout: 1084 px content container, fluid headings, 3 breakpoints
 - **Decided by:** me, from measuring the reference at 11 widths.
@@ -105,7 +105,7 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 ### D-19 Re-sync the Figma frames and the old design files with the site, last
 - **Decided by:** owner ("yes").
 - **Why last:** the design should copy the finished site, not a moving one. It runs after the lower-section comparison (D-17) and the SEO/prerender work (D-20).
-- **How:** regenerate the design HTML from the site's final state and re-capture into Figma with the existing capture script.
+- **How:** regenerate the design HTML from the site's final state and re-capture into Figma with the existing capture script. Done differently in D-29: capture the built site itself.
 
 ### D-20 Prerender the site, and optimise it for SEO and AEO; the owner wants to learn how
 - **Decided by:** owner ("yes, I need to learn how we can optimise for SEO and AEO").
@@ -175,6 +175,13 @@ Newest changes to a decision are noted inside the entry, not as new entries.
 - **Result** (same measurement as D-27, A/B in one session, run twice): CLS 0.149 to 0.036 (under the 0.1 limit); 0 without network throttling. First and largest paint unchanged within noise. 23 specs pass, page heights match the golden baselines, and no character on the page needs a dropped subset.
 - **Left:** 0.036 remains on a slow network, where the fonts still arrive after first paint. A fallback font with matched metrics would remove it; not worth the extra CSS yet.
 - **Cost:** 320 KB of font files in the repo. Cyrillic, Greek and Vietnamese subsets are not included; add them to `fonts.css` if real copy needs them. Updating a font means re-downloading the files by hand.
+
+### D-29 Figma frames are captured from the built site, not from a second generator
+- **Decided by:** me, within D-19 (the earlier handoff note already said "build these from the site's real output").
+- **What:** the site was served from `dist/` and captured with the existing `figma-capture.mjs` at 1280, 768 and 375 (menu open as a fourth frame) into the existing Figma file. Frames: `26:2`, `27:2`, `28:2`, `29:2`, named "... v3 (site)". Their sizes equal the golden baselines (8751 / 9467 / 11600), so the capture shows the same page.
+- **Archived, not deleted (D-14):** the generator (`gen-responsive.mjs`, `render-responsive.mjs`), the generated design HTML and PNGs, `sections/`, `older/` (F-3 resolved), the duplicate tokens, `design-spec.md` and old screenshots moved to `archive/design-source-old/`. A second generator would drift from the site again, which is why Figma went stale.
+- **Not done:** the "States and motion 1280" frame (`17:2`) was built from the archived generator and still has the old palette and sizes; it was not regenerated (hover, focus and motion states cannot be captured from one page load). The older v1 and v2 frames were left in Figma for the owner to delete. The v3 frames are raw captures, not components.
+- **Quirk:** the capture script's Node process does not exit after submitting; see FIGMA-HANDOFF section 2.
 
 ## Open: waiting for the owner
 

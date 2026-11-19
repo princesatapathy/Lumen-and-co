@@ -129,8 +129,7 @@ flowchart LR
   ref[Live reference site<br/>naveenrkcreates.com] -->|measure: sizes, colours, motion| analysis[reference-analysis/<br/>measuring scripts + findings]
   videos[Two reference videos] -->|frame extraction| analysis
   analysis -->|geometry + tokens| site[site/<br/>the product]
-  analysis -->|older path| design[design-source/<br/>HTML generator]
-  design -->|Playwright capture| figma[Figma frames<br/>STALE vs site]
+  site -->|build + Playwright capture<br/>design-source/scripts| figma[Figma frames<br/>v3 from the site]
 ```
 
 The site is the source of truth. The older design generator and the Figma frames were built from earlier reference numbers and **no longer match the site** (new palette, container, type scale, reel). Re-syncing them is a separate task.
@@ -166,9 +165,7 @@ Portfolio2/
   reference-analysis/         measuring the live reference
     scripts/  data/  specs/   tracked
     videos/  screenshots/     ignored
-  design-source/              old design + Figma pipeline, STALE vs the site
-    scripts/  sections/  older/  tokens.*  responsive*.html  states.html  design-spec.md
-    screenshots/              ignored
+  design-source/              Figma capture script only (frames come from the built site)
   docs/                       ARCHITECTURE, DECISIONS, REORGANIZATION-PLAN, REFERENCE-NOTES,
                               FIGMA-HANDOFF, SEO-AEO-GUIDE, CONTENT-INTAKE, FILE-MANIFEST (historical)
   archive/                    ignored: paper-era/, scratch/, design-export-duplicates/,

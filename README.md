@@ -24,7 +24,7 @@ The helper scripts in `dev-tools/`, `reference-analysis/scripts/` and `design-so
 | `site/` | The product. `src/` (`main.ts`, `styles/`, `content/`, `components/`, `sections/`, `behavior/`), `index.html`, config. `tests/` holds checks and golden screenshots |
 | `dev-tools/` | `browser.mjs` (where the helper scripts load Playwright from; the specs in `site/tests/e2e/` use `@playwright/test`) and `range-server.mjs` (static server with Range support, needed for video seeking) |
 | `reference-analysis/` | Measuring the live reference: `scripts/`, `data/`, `specs/` (older notes), `videos/`, `screenshots/` |
-| `design-source/` | The old design HTML, tokens and the Figma capture scripts. **Stale** compared with the site; re-synced in the last step |
+| `design-source/` | The Figma capture script only. Frames are captured from the built site (`docs/FIGMA-HANDOFF.md`); the old design files are in `archive/design-source-old/` |
 | `docs/` | Architecture, decisions, plan, notes. See below |
 | `archive/` | Dead Paper-era files, scratch scripts, unused libraries, a pre-reorganisation zip. Kept until the owner decides. Nothing in it is used |
 

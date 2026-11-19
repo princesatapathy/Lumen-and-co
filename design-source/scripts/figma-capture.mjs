@@ -12,6 +12,7 @@ const page = await browser.newPage({ viewport: { width: Number(viewportWidth), h
 if (process.env.MOTION !== 'on') await page.emulateMedia({ reducedMotion: 'reduce' }); // static capture: no mid-animation or hidden-reveal layers. MOTION=on keeps animations (states sheet freezes them itself)
 await page.goto(pageUrl, { waitUntil: 'networkidle' });
 await page.evaluate(() => document.fonts.ready); // capture with real fonts, not fallbacks
+if (process.env.CLICK_BEFORE_CAPTURE) await page.click(process.env.CLICK_BEFORE_CAPTURE); // e.g. '[data-menu-toggle]' for the mobile-menu-open frame
 const captureScript = await (await page.context().request.get('https://mcp.figma.com/mcp/html-to-design/capture.js')).text();
 await page.evaluate((source) => { const el = document.createElement('script'); el.textContent = source; document.head.appendChild(el); }, captureScript);
 await page.waitForTimeout(500);

@@ -1,7 +1,7 @@
 # Reorganization plan
 
 Goal: one clear structure for code, folders and docs, with **no visual change** to the site.
-Status: Step 0 and Step 1 done (2026-11-08). Step 2 done: 2a site refactor (rendered DOM and CSS byte-identical), 2b `pnpm test` (17 specs pass), 2c docs. `pixdiff` was not ported to a spec (run by hand). Step 3 review done (2026-11-08): no DOM or CSS regression from the refactor; fixed `range-server` crash and exposure, stale docs. That review only caught four copied labels; Step 4 found 48 exact matches with the reference and rewrote all placeholder copy (`reference-analysis/scripts/copy-overlap.mjs` is the check). Step 4 done and accepted by the owner (2026-11-08): copy rewritten, sections below the hero follow the reference's layout rules at 375 / 768 / 1280, mobile clip row swipes, menu and FAQ accessibility fixes (D-26). Golden baselines refreshed (old ones in `archive/pre-step4-baseline/`); all 18 specs pass. Step 5 done (2026-11-19, D-27): prerender plus head tags, JSON-LD, robots/sitemap/llms.txt; 23 specs pass; speed unchanged for people, CLS 0.149 open. The site address is a placeholder until O-11. Step 6 not started. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
+Status: Step 0 and Step 1 done (2026-11-08). Step 2 done: 2a site refactor (rendered DOM and CSS byte-identical), 2b `pnpm test` (17 specs pass), 2c docs. `pixdiff` was not ported to a spec (run by hand). Step 3 review done (2026-11-08): no DOM or CSS regression from the refactor; fixed `range-server` crash and exposure, stale docs. That review only caught four copied labels; Step 4 found 48 exact matches with the reference and rewrote all placeholder copy (`reference-analysis/scripts/copy-overlap.mjs` is the check). Step 4 done and accepted by the owner (2026-11-08): copy rewritten, sections below the hero follow the reference's layout rules at 375 / 768 / 1280, mobile clip row swipes, menu and FAQ accessibility fixes (D-26). Golden baselines refreshed (old ones in `archive/pre-step4-baseline/`); all 18 specs pass. Step 5 done (2026-11-19, D-27): prerender plus head tags, JSON-LD, robots/sitemap/llms.txt; 23 specs pass; speed unchanged for people, CLS 0.149 open. The site address is a placeholder until O-11. Fonts self-hosted, layout shift 0.036 (D-28). Step 6 done (2026-11-19, D-29): four v3 Figma frames captured from the built site; old design files archived; the states sheet is still stale. Architecture is in `ARCHITECTURE.md`, reasons in `DECISIONS.md`.
 
 ## 1. Problems this fixes
 
@@ -97,7 +97,7 @@ Build-time prerender, head tags, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt
 
 ## 8. Step 6: re-sync Figma and `design-source/` (D-19)
 
-Regenerate the design HTML from the finished site and re-capture it into Figma. Last, so the design copies a stable result.
+Done (D-29). Instead of regenerating design HTML, the built site is captured into Figma directly, so there is no second design to keep in sync. Last, so the design copies a stable result.
 
 ## 9. Out of scope for this plan
 
